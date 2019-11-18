@@ -39,37 +39,37 @@ $wp_url = get_template_directory_uri(); ?>
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">KAGARIについて</a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-<a class="dropdown-item" href="#">Action</a>
-<a class="dropdown-item" href="#">Another action</a>
+<a class="dropdown-item" href="<?php echo $home; ?>/">Action</a>
+<a class="dropdown-item" href="<?php echo $home; ?>/">Another action</a>
 <div class="dropdown-divider"></div>
-<a class="dropdown-item" href="#">Something else here</a>
+<a class="dropdown-item" href="<?php echo $home; ?>/">Something else here</a>
 </div>
 </li>
 <li class="nav-item">
-<a class="nav-link text-dark" href="#">料金プラン</a>
+<a class="nav-link text-dark" href="<?php echo $home; ?>/">料金プラン</a>
 </li>
 <li class="nav-item">
-<a class="nav-link text-dark" href="#">導入事例</a>
+<a class="nav-link text-dark" href="<?php echo $home; ?>/">導入事例</a>
 </li>
 <li class="nav-item">
-<a class="nav-link text-dark" href="#">お役立ち資料</a>
+<a class="nav-link text-dark" href="<?php echo $home; ?>/">お役立ち資料</a>
 </li>
 <li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ヘルプ</a>
-<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-<a class="dropdown-item" href="#">Action</a>
-<a class="dropdown-item" href="#">Another action</a>
+<a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ヘルプ</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown-2">
+<a class="dropdown-item" href="<?php echo $home; ?>/">Action</a>
+<a class="dropdown-item" href="<?php echo $home; ?>/">Another action</a>
 <div class="dropdown-divider"></div>
-<a class="dropdown-item" href="#">Something else here</a>
+<a class="dropdown-item" href="<?php echo $home; ?>/">Something else here</a>
 </div>
 </li>
 </ul>
 <ul class="navbar-nav ml-auto">
 <li class="nav-item">
-<a class="nav-link text-primary" href="#" target="_blank">ログイン</a>
+<a class="nav-link text-primary" href="<?php echo $home; ?>/" target="_blank">ログイン</a>
 </li>
 <li class="nav-item">
-<a class="btn btn-primary" href="#" target="_blank"><i class="fab fa-google mr-2"></i>無料で利用する</a>
+<a class="btn btn-primary" href="<?php echo $home; ?>/" target="_blank"><i class="fab fa-google mr-2"></i>無料で利用する</a>
 </li>
 </ul>
 </div>

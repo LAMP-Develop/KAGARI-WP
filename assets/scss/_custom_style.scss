@@ -1,4 +1,14 @@
-// line-height: 1
 .navbar-brand {
   line-height: 1;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+.jumbotron {
+  padding: $jumbotron-padding 0;
+  @include media-breakpoint-up(sm) {
+    padding: ($jumbotron-padding / 2) 0;
+  }
 }
