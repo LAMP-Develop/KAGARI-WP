@@ -10,6 +10,5 @@ $wp_url = get_template_directory_uri(); ?>
 </footer>
 <!-- フッター終了 -->
 <?php wp_footer(); ?>
-<script src="<?php echo $wp_url; ?>/lib/js/jquery.min.js"></script>
 </body>
 </html>
