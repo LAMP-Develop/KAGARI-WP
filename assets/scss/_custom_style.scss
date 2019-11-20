@@ -1,3 +1,8 @@
+svg{
+  display: block;
+  margin: 0 auto;
+}
+
 .navbar-brand {
   line-height: 1;
 }
@@ -8,7 +13,18 @@
 
 .jumbotron {
   padding: $jumbotron-padding 0;
+  margin: 0;
   @include media-breakpoint-up(sm) {
     padding: ($jumbotron-padding / 2) 0;
+  }
+  }
+.card{
+  .card-title{
+    margin-bottom: 1.5rem;
+    font-size: $font-size-base * 1.5;
+    // white-space: nowrap;
+  }
+  .card-text{
+    font-size: 1rem;
   }
 }

@@ -1,6 +1,7 @@
 // フォント周り
 $font-family-sans-serif: 'Noto Sans JP', sans-serif;
 $font-size-base: .9rem;
+$font-size-lg: 1.5rem;
 
 // 色変更
 $body-color: #4E5670;
@@ -12,8 +13,13 @@ $secondary: #CCCCCC;
 // $info: ;
 // $warning: ;
 // $danger: ;
-// $light: ;
+$light: #4E5670;
 
 // Jumbotron
-$jumbotron-padding: 4rem;
+$jumbotron-padding: 20rem;
+$jumbotron-margin: 0;
 $jumbotron-bg: #f0f4f5;
+// Card
+$card-spacer-y: 2rem;
+$card-spacer-x: 1.7rem;
+$card-border-radius: 8px;
