@@ -2,93 +2,298 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
-<section class="jumbotron">
+
+<section id="mv" class="cta jumbotron position-relative">
 <div class="container">
 <h1 class="display-4 text-dark font-weight-bold mb-5">WEBサイトの<br>アクセス解析レポートを<br>AIが自動作成</h1>
-<a class="btn btn-primary btn-lg" href="#" role="button"><i class="fab fa-google mr-2"></i>今すぐ無料トライアル</a>
+<a class="btn btn-primary" href="#" role="button"><i class="fab fa-google mr-2"></i>今すぐ無料トライアル</a>
+</div>
+<div class="img position-absolute">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/mv.png" alt="レポート画像">
 </div>
 </section>
 
-<section class="py-5 bg-success">
+<section class="sec bg-success">
 <div class="container">
-<h2 class="font-size-lg text-white text-center py-5 font-weight-bold">Webサイトの運用報告をKAGARIが効率化します</h2>
+<h2 class="font-size-lg text-white text-center font-weight-bold mb-md-5 mb-4">WEBサイトの運用報告をKAGARIが効率化します</h2>
 <div class="row">
 <div class="col-lg-4">
-<div class="card mb-4">
-<!-- <img src="..." class="card-img-top" alt="..."> -->
+<div class="card">
 <div class="card-body">
-<svg class="my-4" width="100" height="62" viewBox="0 0 100 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17 18H77V54H21C18.7909 54 17 52.2091 17 50V18Z" fill="white"/>
-<path d="M17 10C17 7.79086 18.7909 6 21 6H73C75.2091 6 77 7.79086 77 10V18H17V10Z" fill="#A6B1C9"/>
-<path d="M23 13C23.5523 13 24 12.5523 24 12C24 11.4477 23.5523 11 23 11C22.4477 11 22 11.4477 22 12C22 12.5523 22.4477 13 23 13Z" fill="#F27E7C"/>
-<path d="M30 13C30.5523 13 31 12.5523 31 12C31 11.4477 30.5523 11 30 11C29.4477 11 29 11.4477 29 12C29 12.5523 29.4477 13 30 13Z" fill="#F27E7C"/>
-<path d="M37 13C37.5523 13 38 12.5523 38 12C38 11.4477 37.5523 11 37 11C36.4477 11 36 11.4477 36 12C36 12.5523 36.4477 13 37 13Z" fill="#F27E7C"/>
-<path opacity="0.15" d="M17 18H21V54V54C18.7909 54 17 52.2091 17 50V18ZM17 10C17 7.79086 18.7909 6 21 6V6V18H17V10Z" fill="#000064"/>
-<path d="M77 18V10C77 7.79086 75.2091 6 73 6H21C18.7909 6 17 7.79086 17 10V18M77 18H17M77 18V54H21C18.7909 54 17 52.2091 17 50V18" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M69 34H65L59 28L53 40L43 26L33 44L29 34H25" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23 13C23.5523 13 24 12.5523 24 12C24 11.4477 23.5523 11 23 11C22.4477 11 22 11.4477 22 12C22 12.5523 22.4477 13 23 13Z" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M30 13C30.5523 13 31 12.5523 31 12C31 11.4477 30.5523 11 30 11C29.4477 11 29 11.4477 29 12C29 12.5523 29.4477 13 30 13Z" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M37 13C37.5523 13 38 12.5523 38 12C38 11.4477 37.5523 11 37 11C36.4477 11 36 11.4477 36 12C36 12.5523 36.4477 13 37 13Z" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="76" cy="50" r="9" fill="#FF8B76" stroke="#2E4369" stroke-width="2"/>
-<path d="M71.5 49.5L75 53L80.5 47.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<p class="card-title font-weight-bold text-center">Google Analyticsと<br>連携するだけ</p>
-<p class="card-text">タグの埋め込みは不要！お使いのGoogleアカウントと連携してすぐにご利用いただけます</p>
+<div class="text-center mb-4">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/icon_graf.png" alt="Google Analytics">
+</div>
+<h3 class="card-title font-weight-bold text-center h5 text-dark">Google Analyticsと<br>連携するだけ</h3>
+<p>タグの埋め込みは不要！お使いのGoogleアカウントと連携してすぐにご利用いただけます</p>
+<div class="text-center">
+<a href="#">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
 </div>
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card mb-4">
+<div class="card">
 <div class="card-body">
-<svg class="my-4" width="100" height="62" viewBox="0 0 100 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26 1C40 1 50 6.2 50 17V27C50.7 29.9 52.1 32.7 54 35C54.9 35.9 55.2 37.5 53.1 38.1C51.2 38.6 50.6 38.5 50.4 39.8C50.2 41.1 51 42.6 49.8 43C48.6 43.4 49.7 44.7 48.5 45.7C47.7 46.4 49.5 50.9 45.1 50.9H40.4C38.1 50.9 38 52.6 38 54.9C38 57.2 40 60.9 40 60.9H12C12 60.9 16 56.8 16 52.9C16 46.9 4 37.4 4 20.9C4 5.2 16 1 26 1Z" fill="white"/>
-<path d="M35.5 13.2C31.7 8.39999 24.8 7.59999 20 11.4C19.3 11.9 18.8 12.5 18.2 13.2C13.9 13.9 11 18 11.8 22.4C12.5 26.2 15.8 29 19.7 29C20 29 20.2 28.9 20.4 28.9C24.2 31.7 29.4 31.7 33.3 28.9C33.4 28.9 33.6 28.9 33.7 28.9C38.1 28.9 41.7 25.3 41.7 20.9C41.7 17.2 39.1 14 35.5 13.2Z" fill="#99DDC9"/>
-<path opacity="0.25" d="M35.5 13.2C31.7 8.39999 24.8 7.59999 20 11.4C19.3 11.9 18.8 12.5 18.2 13.2C16.1 13.6 14.2 14.8 13 16.5C14 15.8 15 15.4 16.2 15.2C20 10.5 26.9 9.69999 31.6 13.5C32.3 14 32.8 14.6 33.4 15.3C37.7 16.3 40.4 20.5 39.4 24.8C39.2 25.8 38.8 26.8 38.2 27.6C41.8 25.1 42.7 20.1 40.2 16.5C39.1 14.8 37.4 13.6 35.5 13.2Z" fill="white"/>
-<path opacity="0.14" d="M16 59C16 59 20 54.9 20 51C20 45 8 35.5 8 19C8 10.7 11.3 5.70001 15.8 2.70001C9.3 5.10001 4 10.5 4 21C4 37.5 16 47 16 53C16 56.9 12 61 12 61H40C40 61 39.5 60.1 39.1 59H16Z" fill="#000064"/>
-<path d="M27 15L21.7 23H31.7L26.7 30.4" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M35.5 13.2C31.7 8.39999 24.8 7.59999 20 11.4C19.3 11.9 18.8 12.5 18.2 13.2C13.9 13.9 11 18 11.8 22.4C12.5 26.2 15.8 29 19.7 29C20 29 20.2 28.9 20.4 28.9C24.2 31.7 29.4 31.7 33.3 28.9C33.4 28.9 33.6 28.9 33.7 28.9C38.1 28.9 41.7 25.3 41.7 20.9C41.7 17.2 39.1 14 35.5 13.2Z" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M60.3 41.3L72.8001 36.7C74.6001 37.1 76.4 37.3 78.2 37.3C89.2 37.3 98.1 30.2 98.1 21.4C98.1 12.6 89.2 5.60001 78.2 5.60001C67.2 5.60001 58.3 12.7 58.3 21.5C58.3 25.9 60.6 30 64.3 32.9L60.3 41.3Z" fill="white"/>
-<path opacity="0.14" d="M82.2 34C71.2 34 62.3 26.6 62.3 17.4C62.3 14.8 63.1 12.2 64.5 9.89999C60.7 12.7 58.3 16.9 58.3 21.4C58.3 25.9 60.6 29.9 64.3 32.8L60.3 41.3L72.8001 36.7C74.6001 37.1 76.4 37.3 78.2 37.3C85 37.3 91.1 34.5 94.7 30.3C91 32.8 86.6 34.1 82.2 34Z" fill="#000064"/>
-<path opacity="0.4" d="M85.5 18.1C93.4 20.7 93.3 17.6 92.4 15.6C91.9 14.7 91.3 13.8 90.5 13C86.8 9.39999 82.7 9.59999 80.1 10.7C77.5 11.8 77.5 15.5 85.5 18.1Z" fill="white"/>
-<path d="M70.2 22.8C70.918 22.8 71.5 22.218 71.5 21.5C71.5 20.782 70.918 20.2 70.2 20.2C69.482 20.2 68.9 20.782 68.9 21.5C68.9 22.218 69.482 22.8 70.2 22.8Z" fill="#2E4369"/>
-<path d="M78.2 22.8C78.918 22.8 79.5 22.218 79.5 21.5C79.5 20.782 78.918 20.2 78.2 20.2C77.482 20.2 76.9 20.782 76.9 21.5C76.9 22.218 77.482 22.8 78.2 22.8Z" fill="#2E4369"/>
-<path d="M86.1 22.8C86.818 22.8 87.4 22.218 87.4 21.5C87.4 20.782 86.818 20.2 86.1 20.2C85.3821 20.2 84.8 20.782 84.8 21.5C84.8 22.218 85.3821 22.8 86.1 22.8Z" fill="#2E4369"/>
-<path d="M60.3 41.3L72.8001 36.7C74.6001 37.1 76.4 37.3 78.2 37.3C89.2 37.3 98.1 30.2 98.1 21.4C98.1 12.6 89.2 5.60001 78.2 5.60001C67.2 5.60001 58.3 12.7 58.3 21.5C58.3 25.9 60.6 30 64.3 32.9L60.3 41.3Z" stroke="#2E4369" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M70.2 22.8C70.918 22.8 71.5 22.218 71.5 21.5C71.5 20.782 70.918 20.2 70.2 20.2C69.482 20.2 68.9 20.782 68.9 21.5C68.9 22.218 69.482 22.8 70.2 22.8Z" stroke="#2E4369" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M78.2 22.8C78.918 22.8 79.5 22.218 79.5 21.5C79.5 20.782 78.918 20.2 78.2 20.2C77.482 20.2 76.9 20.782 76.9 21.5C76.9 22.218 77.482 22.8 78.2 22.8Z" stroke="#2E4369" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M86.1 22.8C86.818 22.8 87.4 22.218 87.4 21.5C87.4 20.782 86.818 20.2 86.1 20.2C85.3821 20.2 84.8 20.782 84.8 21.5C84.8 22.218 85.3821 22.8 86.1 22.8Z" stroke="#2E4369" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M26 1C40 1 50 6.2 50 17V27C50.7 29.9 52.1 32.7 54 35C54.9 35.9 55.2 37.5 53.1 38.1C51.2 38.6 50.6 38.5 50.4 39.8C50.2 41.1 51 42.6 49.8 43C48.6 43.4 49.7 44.7 48.5 45.7C47.7 46.4 49.5 50.9 45.1 50.9H40.4C38.1 50.9 38 52.6 38 54.9C38 57.2 40 60.9 40 60.9H12C12 60.9 16 56.8 16 52.9C16 46.9 4 37.4 4 20.9C4 5.2 16 1 26 1Z" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<p class="card-title font-weight-bold text-center">改善施策を<br>AIが自動で提案</p>
-<p class="card-text">数多くのサイトの解析を手掛けたノウハウに基づいて、的確な改善施策を自動で提案します</p>
+<div class="text-center mb-4">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/icon_ai.png" alt="AI">
+</div>
+<h3 class="card-title font-weight-bold text-center h5 text-dark">改善施策を<br>AIが自動で提案</h3>
+<p>数多くのサイトの解析を手掛けたノウハウに基づいて、的確な改善施策を自動で提案します</p>
+<div class="text-center">
+<a href="#">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
 </div>
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card mb-4">
+<div class="card">
 <div class="card-body">
-<svg class="my-4" width="100" height="62" viewBox="0 0 100 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M64.3 17V1H40.3C38.0909 1 36.3 2.79086 36.3 5V61H76.3001C78.5092 61 80.3001 59.2091 80.3001 57V17H64.3Z" fill="white"/>
-<path d="M80.3001 17L64.3 1V17H80.3001Z" fill="white"/>
-<path opacity="0.15" d="M59.4 1V24H80.3V17H64.3V1H59.4Z" fill="#000064"/>
-<path d="M71.1 36.1C71 43.2 65.2 49 58.1 48.9C51 48.8 45.2 43 45.3 35.9C45.4 28.8 51.1 23.1 58.2 23.1H59.3V36.1H71.1Z" fill="#FF8B76"/>
-<path d="M59.3 36.1H73.3C73.3 28.2 67.2 21.6 59.3 21V36.1Z" fill="#61E0B2"/>
-<path d="M36.3 61H76.3001C78.5092 61 80.3001 59.2091 80.3001 57V17L64.3 1H40.3C38.0909 1 36.3 2.79086 36.3 5V32.7" stroke="#2E4369" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M71.1 35.9C71.1 43 65.3001 48.8 58.2001 48.8C51.1001 48.8 45.3 43 45.3 35.9C45.3 28.8 51.0001 23 58.2001 23H59.3M64.3 1V17H80.3001L64.3 1Z" stroke="#2E4369" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M59.3 35.9H73.3C73.3 28 67.2 21.5 59.3 20.9V35.9Z" stroke="#2E4369" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11 61H25" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M13 33H25" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25 42H31" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M36.3 42H36.31" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M36.3 51H36.31" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17 51H28" stroke="#2E4369" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<p class="card-title font-weight-bold text-center">そのまま使える<br>レポートが自動で完成</p>
-<p class="card-text">報告業務にすぐ使えるレポートがそのまま印刷できるPDF形式でダウンロードできます</p>
+<div class="text-center mb-4">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/icon_report.png" alt="レポート">
+</div>
+<h3 class="card-title font-weight-bold text-center h5 text-dark">そのまま使える<br>レポートが自動で完成</h3>
+<p>報告業務にすぐ使えるレポートがそのまま印刷できるPDF形式でダウンロードできます</p>
+<div class="text-center">
+<a href="#">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
+
+<section class="sec sec-bg-gray">
+<div class="container">
+<div class="row">
+<div class="col-sm">
+<h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">見やすく、使いやすいレポートを<br>すぐに作成します</h2>
+<div class="row text-center">
+<div class="service-card col-md bg-white rounded-lg shadow-sm py-4 mb-md-0 mb-2">
+<span class="opacity-item opacity-bg-blue">
+<i class="fas fa-list-alt opacity-color-blue"></i>
+</span>
+<p class="font-weight-bold h5 text-dark my-3">サマリー</p>
+<p class="text-left m-0">サイト全体の状態を知る</p>
+</div>
+<div class="service-card col-md bg-white rounded-lg shadow-sm py-4 mx-md-3 mb-md-0 mb-2">
+<span class="opacity-item opacity-bg-yellow">
+<i class="fas fa-users opacity-color-yellow"></i>
+</span>
+<p class="font-weight-bold h5 text-dark my-3">ユーザー属性</p>
+<p class="text-left m-0">サイトの訪問者の属性を知る</p>
+</div>
+<div class="service-card col-md bg-white rounded-lg shadow-sm py-4 mb-md-0 mb-2">
+<span class="opacity-item opacity-bg-purple-2">
+<i class="fas fa-share-alt opacity-color-purple-2"></i>
+</span>
+<p class="font-weight-bold h5 text-dark my-3">流入元</p>
+<p class="text-left m-0">ユーザーの訪れる経路を知る</p>
+</div>
+<div class="w-100 my-md-2"></div>
+<div class="service-card col-md bg-white rounded-lg shadow-sm py-4 mb-md-0 mb-2">
+<span class="opacity-item opacity-bg-green">
+<i class="fas fa-pager opacity-color-green"></i>
+</span>
+<p class="font-weight-bold h5 text-dark my-3">ユーザー行動</p>
+<p class="text-left m-0">ページごとのアクセス状況を知る</p>
+</div>
+<div class="service-card col-md bg-white rounded-lg shadow-sm py-4 mx-md-3 mb-md-0 mb-2">
+<span class="opacity-item opacity-bg-red">
+<i class="fas fa-flag opacity-color-red"></i>
+</span>
+<p class="font-weight-bold h5 text-dark my-3">コンバージョン</p>
+<p class="text-left m-0">目標の達成度合いを知る</p>
+</div>
+<div class="service-card col-md bg-white rounded-lg shadow-sm py-4">
+<span class="opacity-item opacity-bg-purple">
+<i class="fas fa-ad opacity-color-purple"></i>
+</span>
+<p class="font-weight-bold h5 text-dark my-3">広告</p>
+<p class="text-left m-0">リスティング広告の状況を知る</p>
+</div>
+</div>
+<div class="row justify-content-start mt-md-5">
+<div class="col-md-3 p-0">
+<a href="#" class="btn btn-outline-primary">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
+<div class="col-md-5 p-0">
+<a href="#" class="btn btn-outline-primary"><i class="fas fa-arrow-alt-circle-down mr-2"></i>サンプルをダウンロード</a>
+</div>
+</div>
+</div>
+<div class="col-md">
+<div class="text-center">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/sample.png" alt="レポート">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec sec-bg-dark">
+<div class="container">
+<h2 class="font-size-lg text-white text-center font-weight-bold mb-md-5 mb-4">レポートを自動化して様々な課題を解決します</h2>
+<div class="row">
+<div class="col-md bg-white rounded-lg py-5 px-md-4 text-center">
+<div class="mb-3">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/customer01.png" alt="制作会社">
+</div>
+<p class="font-weight-bold text-dark h4">制作会社</p>
+<p class="text-dark">営業担当者様</p>
+<p class="text-left m-0">レポート作成を効率化し、定期的に改善提案をすることで継続受注につながります。</p>
+<div class="text-center mt-4">
+<a href="#">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
+</div>
+<div class="col-md bg-white rounded-lg py-5 px-md-4 mx-md-5 text-center">
+<div class="mb-3">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/customer02.png" alt="事業会社">
+</div>
+<p class="font-weight-bold text-dark h4">事業会社</p>
+<p class="text-dark">WEB担当者様</p>
+<p class="text-left m-0">レポート作成を効率化し、定期的に改善提案をすることで継続受注につながります。</p>
+<div class="text-center mt-4">
+<a href="#">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
+</div>
+<div class="col-md bg-white rounded-lg py-5 px-md-4 text-center">
+<div class="mb-3">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/customer03.png" alt="EC運営会社">
+</div>
+<p class="font-weight-bold text-dark h4">EC運営会社</p>
+<p class="text-dark">WEB担当者様</p>
+<p class="text-left m-0">レポート作成を効率化し、定期的に改善提案をすることで継続受注につながります。</p>
+<div class="text-center mt-4">
+<a href="#">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec sec-bg-gray">
+<div class="container">
+<h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">業種・業態を問わず様々なお客様に<br>ご利用いただいています</h2>
+<div class="row">
+<div class="position-relative col-md rounded-lg shadow-sm bg-white py-md-5 py-4 px-md-4">
+<div class="thumbnail text-center">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_officebank.png" alt="オフィスバンク">
+</div>
+<hr class="my-md-5 my-4 w-100">
+<div class="title">
+<h3 class="m-0 lead text-dark">【オフィスバンク株式会社様】アクセスに関する課題を改善し、問い合わせが2.5倍増加した事例</h3>
+</div>
+<a class="stretched-link" href="#"></a>
+</div>
+<div class="position-relative col-md rounded-lg shadow-sm bg-white py-md-5 py-4 px-md-4 mx-md-4">
+<div class="thumbnail text-center">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_officebank.png" alt="オフィスバンク">
+</div>
+<hr class="my-md-5 my-4 w-100">
+<div class="title">
+<h3 class="m-0 lead text-dark">【オフィスバンク株式会社様】アクセスに関する課題を改善し、問い合わせが2.5倍増加した事例</h3>
+</div>
+<a class="stretched-link" href="#"></a>
+</div>
+<div class="position-relative col-md rounded-lg shadow-sm bg-white py-md-5 py-4 px-md-4">
+<div class="thumbnail text-center">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_officebank.png" alt="オフィスバンク">
+</div>
+<hr class="my-md-5 my-4 w-100">
+<div class="title">
+<h3 class="m-0 lead text-dark">【オフィスバンク株式会社様】アクセスに関する課題を改善し、問い合わせが2.5倍増加した事例</h3>
+</div>
+<a class="stretched-link" href="#"></a>
+</div>
+</div>
+</div>
+<div class="d-flex justify-content-between align-items-center mt-5">
+<?php for ($i=1; $i<=8; $i++): ?>
+<div class="text-center mx-md-3 mx-2">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/slide_logo0<?php echo $i; ?>.png" alt="導入実績<?php echo $i; ?>">
+</div>
+<?php endfor; ?>
+</div>
+</section>
+
+<section class="sec">
+<div class="container">
+<h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">セミナー情報</h2>
+<ul class="list-group">
+<li class="list-group-item rounded-0">
+<a href="#" class="text-decoration-none">
+<time datetime="" class="d-block text-secondary mb-1">2019/11/30</time>
+<p class="m-0 text-dark lead">セミナーのタイトル</p>
+</a>
+</li>
+<li class="list-group-item rounded-0">
+<a href="#" class="text-decoration-none">
+<time datetime="" class="d-block text-secondary mb-1">2019/11/30</time>
+<p class="m-0 text-dark lead">セミナーのタイトル</p>
+</a>
+</li>
+<li class="list-group-item rounded-0">
+<a href="#" class="text-decoration-none">
+<time datetime="" class="d-block text-secondary mb-1">2019/11/30</time>
+<p class="m-0 text-dark lead">セミナーのタイトル</p>
+</a>
+</li>
+</ul>
+<div class="text-center mt-5">
+<a href="#" class="btn btn-outline-primary">すべてのセミナーを見る<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
+</div>
+</section>
+
+<section class="sec sec-bg-orange">
+<div class="container">
+<h2 class="font-size-lg text-white text-center font-weight-bold mb-md-5 mb-4">さらにWEBサイトを改善したい方に</h2>
+<div class="card mb-4 overflow-hidden sec-bg-gray border-0">
+<div class="row no-gutters">
+<div class="col-md-5 bg-white p-md-4">
+<div class="card-body">
+<div class="card-title">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_seo.png" alt="KAGARI SEO">
+</div>
+<div class="card-title">
+<h3 class="text-dark font-weight-bold">ページごとの比較に特化した<br>SEO流入分析ツール</h3>
+</div>
+<p class="card-text">クライアントに提出するレポートを自動作成して業務効率化。定期的な改善提案で継続受注につなげる。</p>
+<div class="mt-4">
+<a href="https://seo.kagari.ai" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
+</div>
+</div>
+<div class="col-md-7 text-center px-md-5 px-4 pt-md-5 pt-4">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/ui_preview_seo.png" alt="KAGARI Marketing">
+</div>
+</div>
+</div>
+<div class="card overflow-hidden sec-bg-gray border-0">
+<div class="row no-gutters">
+<div class="col-md-5 bg-white p-md-4">
+<div class="card-body">
+<div class="card-title">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_marketing.png" alt="KAGARI Marketing">
+</div>
+<div class="card-title">
+<h3 class="text-dark font-weight-bold">KAGARIのデータを活用した<br>コンテンツマーケティング</h3>
+</div>
+<p class="card-text">クライアントに提出するレポートを自動作成して業務効率化。定期的な改善提案で継続受注につなげる。</p>
+<div class="mt-4">
+<a href="https://marketing.kagari.ai" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
+</div>
+</div>
+<div class="col-md-7 text-center px-md-5 px-4 py-md-5 py-4">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/ui_preview_consulting.png" alt="KAGARI Marketing">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<?php get_template_part('cta'); ?>
+
 <?php get_footer();

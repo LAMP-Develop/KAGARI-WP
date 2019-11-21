@@ -1,6 +1,28 @@
-svg{
-  display: block;
-  margin: 0 auto;
+.sec {
+  padding: ($font-size-lg*3.5) 0;
+  @include media-breakpoint-down(sm) {
+    padding: ($font-size-lg*1.75) 0;
+  }
+
+  &-bg-gray {
+    background-color: $body-bg-2;
+  }
+
+  &-bg-dark {
+    background-color: $dark-2;
+  }
+
+  &-bg-orange {
+    background-color: $primary-2;
+  }
+
+  .container {
+    .lead,
+    h2 {
+      letter-spacing: $font-size-base*0.1;
+      line-height: 1.5;
+    }
+  }
 }
 
 .navbar-brand {
@@ -8,23 +30,123 @@ svg{
 }
 
 .navbar {
-  padding: 1rem 0;
+  padding: ($font-size-base*1.5) 0;
 }
 
 .jumbotron {
   padding: $jumbotron-padding 0;
   margin: 0;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-down(sm) {
     padding: ($jumbotron-padding / 2) 0;
   }
+}
+
+#mv {
+  h1 {
+    line-height: 1.5;
   }
-.card{
-  .card-title{
-    margin-bottom: 1.5rem;
+}
+
+.cta {
+  z-index: 1;
+
+  &:after {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 50vw;
+    height: 100%;
+    background: linear-gradient(to top right, rgba(255,255,255,0) 50%, $dark-2 50.1%) no-repeat top left/100% 100%;
+  }
+
+  .img {
+    right: 5vw;
+    bottom: 0;
+  }
+}
+
+.card {
+  .card-title {
+    margin-bottom: 1em;
     font-size: $font-size-base * 1.5;
-    // white-space: nowrap;
   }
-  .card-text{
-    font-size: 1rem;
+}
+
+.service-card {
+  .opacity-item {
+    display: inline-block;
+    width: $font-size-lg*2;
+    height: $font-size-lg*2;
+    border-radius: 50%;
+    font-size: $font-size-lg;
+    line-height: 2em;
+  }
+}
+
+.opacity {
+  &-color-purple {
+    color: #af52de;
+  }
+
+  &-color-purple-2 {
+    color: #5856d6;
+  }
+
+  &-color-blue {
+    color: #007aff;
+  }
+
+  &-color-blue-2 {
+    color: #5ac8fa;
+  }
+
+  &-color-green {
+    color: #34c759;
+  }
+
+  &-color-yellow {
+    color: #fc0;
+  }
+
+  &-color-red {
+    color: #ff2d55;
+  }
+
+  &-color-red-2 {
+    color: #ff3b30;
+  }
+
+  &-bg-purple {
+    background-color: rgba(175, 82, 222, .12);
+  }
+
+  &-bg-purple-2 {
+    background-color: rgba(88, 86, 214, .12);
+  }
+
+  &-bg-blue {
+    background-color: rgba(0, 122, 255, .12);
+  }
+
+  &-bg-blue-2 {
+    background-color: rgba(90, 200, 250, .12);
+  }
+
+  &-bg-green {
+    background-color: rgba(52, 199, 89, .12);
+  }
+
+  &-bg-yellow {
+    background-color: rgba(255, 204, 0, .12);
+  }
+
+  &-bg-red {
+    background-color: rgba(255, 45, 85, .12);
+  }
+
+  &-bg-red-2 {
+    background-color: rgba(255, 59, 48, .12);
   }
 }

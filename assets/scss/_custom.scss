@@ -1,25 +1,23 @@
-// フォント周り
+/*フォント周り*/
 $font-family-sans-serif: 'Noto Sans JP', sans-serif;
-$font-size-base: .9rem;
-$font-size-lg: 1.5rem;
-
-// 色変更
+$font-size-base: 0.875rem;
+$font-size-lg: ($font-size-base*2);
+/*色変更*/
 $body-color: #4E5670;
 $body-bg: #E5E5E5;
+$body-bg-2: #fafafa;
 $primary: #FF490D;
+$primary-2: #FF725C;
 $dark: #030F36;
+$dark-2: #2E4369;
 $success: #0EC2A1;
 $secondary: #CCCCCC;
-// $info: ;
-// $warning: ;
-// $danger: ;
 $light: #4E5670;
-
-// Jumbotron
-$jumbotron-padding: 20rem;
+/*Jumbotron*/
+$jumbotron-padding: $font-size-base*10;
 $jumbotron-margin: 0;
 $jumbotron-bg: #f0f4f5;
-// Card
+/*Card*/
 $card-spacer-y: 2rem;
 $card-spacer-x: 1.7rem;
 $card-border-radius: 8px;
