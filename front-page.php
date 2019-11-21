@@ -221,24 +221,26 @@ get_header(); ?>
 <div class="container">
 <h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">セミナー情報</h2>
 <ul class="list-group">
+<?php
+$arg = [
+  'posts_per_page' => 3,
+  'orderby' => 'date',
+  'order' => 'DESC',
+  'category_name' => 'seminar'
+];
+$posts = get_posts($arg);
+foreach ($posts as $post):
+setup_postdata($post);
+$t = get_the_title();
+$time = get_the_time('Y-m-d');
+$p = get_the_permalink(); ?>
 <li class="list-group-item rounded-0">
-<a href="#" class="text-decoration-none">
-<time datetime="" class="d-block text-secondary mb-1">2019/11/30</time>
-<p class="m-0 text-dark lead">セミナーのタイトル</p>
+<a href="<?php echo $p; ?>" class="text-decoration-none">
+<time datetime="<?php echo $time ?>" class="d-block text-secondary mb-1"><?php the_time('Y/m/d'); ?></time>
+<p class="m-0 text-dark lead"><?php echo $t; ?></p>
 </a>
 </li>
-<li class="list-group-item rounded-0">
-<a href="#" class="text-decoration-none">
-<time datetime="" class="d-block text-secondary mb-1">2019/11/30</time>
-<p class="m-0 text-dark lead">セミナーのタイトル</p>
-</a>
-</li>
-<li class="list-group-item rounded-0">
-<a href="#" class="text-decoration-none">
-<time datetime="" class="d-block text-secondary mb-1">2019/11/30</time>
-<p class="m-0 text-dark lead">セミナーのタイトル</p>
-</a>
-</li>
+<?php endforeach; wp_reset_postdata(); ?>
 </ul>
 <div class="text-center mt-5">
 <a href="#" class="btn btn-outline-primary">すべてのセミナーを見る<i class="fas fa-chevron-right ml-2"></i></a>

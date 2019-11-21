@@ -26,11 +26,3 @@ function add_my_scripts()
     );
 }
 add_action('wp_enqueue_scripts', 'add_my_scripts');
-
-// JSタグ変更
-function filter_attribute_to_script($tag, $handle, $src)
-{
-    $tag = '<script src="'.esc_url($src).'"></script>'."\n";
-    return $tag;
-}
-add_filter('script_loader_tag', 'filter_attribute_to_script', 10, 3);
