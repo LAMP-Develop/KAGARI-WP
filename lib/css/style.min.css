@@ -7071,7 +7071,8 @@ a.text-dark:hover, a.text-dark:focus {
     background: linear-gradient(to top right, rgba(255, 255, 255, 0) 50%, #2E4369 50.1%) no-repeat top left/100% 100%; }
   .cta .img {
     right: 5vw;
-    bottom: 0; }
+    bottom: 0;
+    max-width: 45vw; }
 
 .card .card-title {
   margin-bottom: 1em;

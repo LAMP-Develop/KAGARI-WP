@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="container">
 <h2 class="font-size-lg text-white text-center font-weight-bold mb-md-5 mb-4">WEBサイトの運用報告をKAGARIが効率化します</h2>
 <div class="row">
-<div class="col-lg-4">
+<div class="col-md">
 <div class="card">
 <div class="card-body">
 <div class="text-center mb-4">
@@ -31,7 +31,7 @@ get_header(); ?>
 </div>
 </div>
 </div>
-<div class="col-lg-4">
+<div class="col-md">
 <div class="card">
 <div class="card-body">
 <div class="text-center mb-4">
@@ -45,7 +45,7 @@ get_header(); ?>
 </div>
 </div>
 </div>
-<div class="col-lg-4">
+<div class="col-md">
 <div class="card">
 <div class="card-body">
 <div class="text-center mb-4">
@@ -66,7 +66,7 @@ get_header(); ?>
 <section class="sec sec-bg-gray">
 <div class="container">
 <div class="row">
-<div class="col-sm">
+<div class="col-lg">
 <h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">見やすく、使いやすいレポートを<br>すぐに作成します</h2>
 <div class="row text-center">
 <div class="service-card col-md bg-white rounded-lg shadow-sm py-4 mb-md-0 mb-2">
@@ -113,16 +113,16 @@ get_header(); ?>
 <p class="text-left m-0">リスティング広告の状況を知る</p>
 </div>
 </div>
-<div class="row justify-content-start mt-md-5">
-<div class="col-md-3 p-0">
+<div class="row justify-content-lg-start justify-content-md-center mt-md-5">
+<div class="col-lg-3 col-md-3 text-md-center p-0">
 <a href="#" class="btn btn-outline-primary">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </div>
-<div class="col-md-5 p-0">
+<div class="col-lg-5 col-md-4 text-md-center p-0">
 <a href="#" class="btn btn-outline-primary"><i class="fas fa-arrow-alt-circle-down mr-2"></i>サンプルをダウンロード</a>
 </div>
 </div>
 </div>
-<div class="col-md">
+<div class="col-lg d-none d-lg-block">
 <div class="text-center">
 <img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/sample.png" alt="レポート">
 </div>
@@ -146,7 +146,7 @@ get_header(); ?>
 <a href="#">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </div>
 </div>
-<div class="col-md bg-white rounded-lg py-5 px-md-4 mx-md-5 text-center">
+<div class="col-md bg-white rounded-lg py-5 px-md-4 mx-md-4 text-center">
 <div class="mb-3">
 <img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/customer02.png" alt="事業会社">
 </div>
