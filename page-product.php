@@ -124,11 +124,9 @@ get_header(); ?>
 </div>
 </div>
 </section>
-
 <section class="sec sec-bg-gray">
 <div class="container">
 <div class="row">
-
 <div class="col-md bg-white border rounded-lg p-md-4 p-3">
 <div class="d-flex justify-content-start align-items-stretch">
 <div class="mr-3">
@@ -163,7 +161,6 @@ get_header(); ?>
 </div>
 </div>
 <div class="w-100 mb-md-3"></div>
-
 <div class="col-md bg-white border rounded-lg p-md-4 p-3">
 <div class="d-flex justify-content-start align-items-stretch">
 <div class="mr-3">
@@ -198,7 +195,6 @@ get_header(); ?>
 </div>
 </div>
 <div class="w-100 mb-md-3"></div>
-
 <div class="col-md bg-white border rounded-lg p-md-4 p-3">
 <div class="d-flex justify-content-start align-items-stretch">
 <div class="mr-3">
@@ -232,7 +228,6 @@ get_header(); ?>
 </div>
 </div>
 </div>
-
 </div>
 </div>
 </section>

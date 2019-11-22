@@ -33,7 +33,7 @@ $wp_url = get_template_directory_uri(); ?>
 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">事例</a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdown-1">
 <a class="dropdown-item" href="<?php echo $home; ?>/works/">導入事例</a>
-<a class="dropdown-item" href="<?php echo $home; ?>/">業界別活用事例</a>
+<a class="dropdown-item" href="<?php echo $home; ?>/case-study/">業界別活用事例</a>
 </div>
 </li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/seminar/">セミナー</a></li>
