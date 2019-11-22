@@ -2,7 +2,6 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
-
 <section id="mv" class="cta jumbotron position-relative">
 <div class="container">
 <h1 class="display-4 text-dark font-weight-bold mb-5">WEBサイトの<br>アクセス解析レポートを<br>AIが自動作成</h1>
@@ -12,7 +11,6 @@ get_header(); ?>
 <img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/mv.png" alt="レポート画像">
 </div>
 </section>
-
 <section class="sec bg-success">
 <div class="container">
 <h2 class="font-size-lg text-white text-center font-weight-bold mb-md-5 mb-4">WEBサイトの運用報告をKAGARIが効率化します</h2>
@@ -62,7 +60,6 @@ get_header(); ?>
 </div>
 </div>
 </section>
-
 <section class="sec sec-bg-gray">
 <div class="container">
 <div class="row">
@@ -130,7 +127,6 @@ get_header(); ?>
 </div>
 </div>
 </section>
-
 <section class="sec sec-bg-dark">
 <div class="container">
 <h2 class="font-size-lg text-white text-center font-weight-bold mb-md-5 mb-4">レポートを自動化して様々な課題を解決します</h2>
@@ -171,41 +167,40 @@ get_header(); ?>
 </div>
 </div>
 </section>
-
 <section class="sec sec-bg-gray">
 <div class="container">
 <h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">業種・業態を問わず様々なお客様に<br>ご利用いただいています</h2>
 <div class="row">
-<div class="position-relative col-md rounded-lg shadow-sm bg-white py-md-5 py-4 px-md-4">
+<?php
+$args = [
+    'posts_per_page' => 3,
+    'post_type' => 'works',
+    'orderby' => 'date',
+    'order' => 'DESC'
+];
+$posts = get_posts($args);
+foreach ($posts as $post): setup_postdata($post);
+$t = get_the_title();
+$p = get_the_permalink();
+if (has_post_thumbnail()) {
+    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
+} else {
+    $thumbnail = $wp_url.'/lib/images/thumbnail.png';
+}
+?>
+<div class="position-relative col-md-4">
+<div class="card border-0 rounded-lg shadow-sm bg-white py-md-5 py-4 px-md-4">
 <div class="thumbnail text-center">
-<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_officebank.png" alt="オフィスバンク">
+<img class="img-fluid" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
 </div>
 <hr class="my-md-5 my-4 w-100">
 <div class="title">
-<h3 class="m-0 lead text-dark">【オフィスバンク株式会社様】アクセスに関する課題を改善し、問い合わせが2.5倍増加した事例</h3>
+<h3 class="m-0 lead text-dark"><?php echo $t; ?></h3>
 </div>
-<a class="stretched-link" href="#"></a>
+<a class="stretched-link" href="<?php echo $p; ?>"></a>
 </div>
-<div class="position-relative col-md rounded-lg shadow-sm bg-white py-md-5 py-4 px-md-4 mx-md-4">
-<div class="thumbnail text-center">
-<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_officebank.png" alt="オフィスバンク">
 </div>
-<hr class="my-md-5 my-4 w-100">
-<div class="title">
-<h3 class="m-0 lead text-dark">【オフィスバンク株式会社様】アクセスに関する課題を改善し、問い合わせが2.5倍増加した事例</h3>
-</div>
-<a class="stretched-link" href="#"></a>
-</div>
-<div class="position-relative col-md rounded-lg shadow-sm bg-white py-md-5 py-4 px-md-4">
-<div class="thumbnail text-center">
-<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_officebank.png" alt="オフィスバンク">
-</div>
-<hr class="my-md-5 my-4 w-100">
-<div class="title">
-<h3 class="m-0 lead text-dark">【オフィスバンク株式会社様】アクセスに関する課題を改善し、問い合わせが2.5倍増加した事例</h3>
-</div>
-<a class="stretched-link" href="#"></a>
-</div>
+<?php endforeach; wp_reset_postdata(); ?>
 </div>
 </div>
 <div class="d-flex justify-content-between align-items-center mt-5">
@@ -216,7 +211,6 @@ get_header(); ?>
 <?php endfor; ?>
 </div>
 </section>
-
 <section class="sec">
 <div class="container">
 <h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">セミナー情報</h2>
@@ -247,7 +241,6 @@ $p = get_the_permalink(); ?>
 </div>
 </div>
 </section>
-
 <section class="sec sec-bg-orange">
 <div class="container">
 <h2 class="font-size-lg text-white text-center font-weight-bold mb-md-5 mb-4">さらにWEBサイトを改善したい方に</h2>
@@ -295,7 +288,5 @@ $p = get_the_permalink(); ?>
 </div>
 </div>
 </section>
-
 <?php get_template_part('cta'); ?>
-
 <?php get_footer();

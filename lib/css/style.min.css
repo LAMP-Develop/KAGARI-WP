@@ -7134,3 +7134,27 @@ a.text-dark:hover, a.text-dark:focus {
 .opacity-bg-red-2 {
   background-color: rgba(255, 59, 48, 0.12); }
 
+.page-conent h2,
+.page-conent h3,
+.page-conent h4,
+.page-conent h5 {
+  color: #030F36;
+  margin: 2em auto .5em auto; }
+
+.page-conent h2 {
+  font-size: 1.53125rem;
+  border-bottom: solid 1px #030F36;
+  padding-bottom: .5em; }
+
+.page-conent h3 {
+  box-sizing: border-box;
+  font-size: 1.3125rem;
+  border-left: solid 3px #030F36;
+  padding-left: .5em; }
+
+.page-conent h4 {
+  font-size: 1.1375rem; }
+
+.page-conent h5 {
+  font-size: 0.9625rem; }
+
