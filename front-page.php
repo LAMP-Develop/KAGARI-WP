@@ -158,7 +158,7 @@ get_header(); ?>
 </div>
 </div>
 </section>
-<section class="sec sec-bg-gray">
+<!-- <section class="sec sec-bg-gray">
 <div class="container">
 <h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">業種・業態を問わず様々なお客様に<br class="d-sm-block d-none">ご利用いただいています</h2>
 <?php get_template_part('works'); ?>
@@ -173,7 +173,7 @@ get_header(); ?>
 </div>
 <?php endfor; ?>
 </div>
-</section>
+</section> -->
 <section class="sec">
 <div class="container">
 <h2 class="font-size-lg text-dark text-center font-weight-bold mb-md-5 mb-4">セミナー情報</h2>
@@ -193,14 +193,14 @@ $time = get_field('seminar_time', get_the_ID());
 $p = get_field('seminar_url', get_the_ID()); ?>
 <li class="list-group-item rounded-0">
 <a class="row mx-0" href="<?php echo $p; ?>" class="text-decoration-none" target="_blank" rel="nofollow">
-<time class="col-2" datetime="<?php the_time('Y-m-d'); ?>" class="d-block text-secondary mb-1"><?php echo $time; ?></time>
-<p class="col-10 m-0 text-dark"><?php echo $t; ?></p>
+<time class="px-md-3 px-0 col-md-2" datetime="<?php the_time('Y-m-d'); ?>" class="d-block text-secondary mb-1"><?php echo $time; ?></time>
+<p class="px-md-3 px-0 col-md-10 m-0 text-dark"><?php echo $t; ?></p>
 </a>
 </li>
 <?php endforeach; wp_reset_postdata(); ?>
 </ul>
 <div class="text-center mt-5">
-<a href="#" class="btn btn-outline-primary">すべてのセミナーを見る<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="<?php echo $home; ?>/seminar/" class="btn btn-outline-primary">すべてのセミナーを見る<i class="fas fa-chevron-right ml-2"></i></a>
 </div>
 </div>
 </section>

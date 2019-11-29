@@ -4,6 +4,7 @@
 /*色変更*/
 /*Jumbotron*/
 /*Card*/
+/*nav-pills*/
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -2912,7 +2913,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #FF490D; }
+  background-color: #2E4369; }
 
 .nav-fill .nav-item {
   flex: 1 1 auto;
@@ -7148,9 +7149,30 @@ a.text-dark:hover, a.text-dark:focus {
 .opacity-bg-red-2 {
   background-color: rgba(255, 59, 48, 0.12); }
 
-.post h2, .post h3, .post h4, .post h5 {
+.nav-pills .nav-link {
+  color: #2E4369;
+  background-color: #E5E5E5;
+  border-radius: 0; }
+
+.nav-pills .nav-item:first-child .nav-link {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem; }
+
+.nav-pills .nav-item:last-child .nav-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem; }
+
+.post h2,
+.post h3,
+.post h4,
+.post h5 {
   font-weight: bold;
-  margin: 1.5em 0 1.5rem 0; }
+  margin: 1.5em 0 1.5rem; }
+
+div.wpcf7 {
+  display: block;
+  max-width: 768px;
+  margin: 0 auto; }
 
 .page-conent h2,
 .page-conent h3,

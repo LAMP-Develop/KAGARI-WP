@@ -2,7 +2,7 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
-<section class="sec sec-bg-gray">
+<section class="sec sec-bg-gray-3">
 <div class="container">
 <h2 class="h5 text-center text-dark font-weight-bold mb-md-5 mb-4"><?php the_title(); ?></h2>
 <h2 class="font-size-lg text-center text-dark font-weight-bold mb-md-5 mb-4">サイトの解析レポート業務に必要な機能を厳選しました</h2>
@@ -124,7 +124,7 @@ get_header(); ?>
 </div>
 </div>
 </section>
-<section class="sec sec-bg-gray">
+<section class="sec sec-bg-gray-3">
 <div class="container">
 <div class="row mx-0">
 <div class="col-md bg-white border rounded-lg p-md-4 p-3 mb-md-0 mb-3">
@@ -229,6 +229,31 @@ get_header(); ?>
 </div>
 </div>
 </div>
+
+<h2 class="font-size-lg text-center text-dark font-weight-bold my-md-5 my-4">SEO分析を行いたい方に</h2>
+<div class="card mb-4 overflow-hidden sec-bg-gray border-0 shadow-sm">
+<div class="row no-gutters">
+<div class="col-md-5 bg-white p-md-4">
+<div class="card-body">
+<div class="card-title">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/logo_seo.png" alt="KAGARI SEO">
+</div>
+<div class="card-title">
+<h3 class="text-dark font-weight-bold">ページごとの比較に特化した<br class="d-sm-block d-none">SEO流入分析ツール</h3>
+</div>
+<p class="card-text">クライアントに提出するレポートを自動作成して業務効率化。定期的な改善提案で継続受注につなげる。</p>
+<div class="mt-4">
+<a href="https://seo.kagari.ai" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+</div>
+</div>
+</div>
+<div class="col-md-7 text-center px-md-5 px-4 pt-md-5 pt-4">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/ui_preview_seo.png" alt="KAGARI Marketing">
+</div>
+</div>
+</div>
+
 </div>
 </section>
+<?php get_template_part('cta'); ?>
 <?php get_footer();

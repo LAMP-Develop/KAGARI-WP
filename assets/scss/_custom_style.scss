@@ -172,9 +172,42 @@
   }
 }
 
-.post {
-  h2,h3,h4,h5 {
-    font-weight: bold;
-    margin: 1.5em 0 1.5rem 0;
+.nav-pills {
+  .nav-link {
+    color: $dark-2;
+    background-color: $body-bg;
+    border-radius: 0;
   }
+
+  .nav-item {
+    &:first-child {
+      .nav-link {
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+      }
+    }
+
+    &:last-child {
+      .nav-link {
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+      }
+    }
+  }
+}
+
+.post {
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: bold;
+    margin: 1.5em 0 1.5rem;
+  }
+}
+
+div.wpcf7 {
+  display: block;
+  max-width: 768px;
+  margin: 0 auto;
 }
