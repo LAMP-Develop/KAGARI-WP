@@ -1,7 +1,7 @@
 <?php
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri(); ?>
-<div class="row">
+<div class="row align-items-stretch">
 <?php
 $args = [
     'posts_per_page' => 3,
@@ -19,14 +19,11 @@ if (has_post_thumbnail()) {
     $thumbnail = $wp_url.'/lib/images/thumbnail.png';
 }
 ?>
-<div class="position-relative col-md-4">
-<div class="card border-0 rounded-lg shadow-sm bg-white py-md-5 py-4 px-md-4 px-3">
-<div class="thumbnail text-center">
-<img class="img-fluid" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
-</div>
-<hr class="my-md-5 my-4 w-100">
-<div class="title">
-<h3 class="m-0 lead text-dark"><?php echo $t; ?></h3>
+<div class="col-md-4 mb-md-0 mb-3">
+<div class="position-relative card border-0 rounded-lg shadow-sm">
+<img class="card-img-top" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<div class="card-body">
+<h3 class="h5 text-dark font-weight-bold"><?php echo $t; ?></h3>
 </div>
 <a class="stretched-link" href="<?php echo $p; ?>"></a>
 </div>
