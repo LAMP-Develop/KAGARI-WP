@@ -1,2 +1,2 @@
-# WPテンプレートテーマ「irori」
-すべて基礎になるWordPressテーマ。# KAGARI-WP
+# KAGARI WordPressテーマ「Report」
+
