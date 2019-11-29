@@ -55,7 +55,7 @@ get_header(); ?>
 </div>
 <p class="my-4">サイト全体のアクセス状況をまとめたページです。訪問者数の変化を示したグラフや、基本的な指標の数値を確認できます。</p>
 <div class="text-center">
-<a href="#" class="btn btn-outline-primary"><i class="fas fa-arrow-alt-circle-down mr-2"></i>サンプルをダウンロード</a>
+<a href="https://kagari.ai/report-demo/pdf/kagari-reports.pdf" class="btn btn-outline-primary" target="_blank"><i class="fas fa-arrow-alt-circle-down mr-2"></i>サンプルをダウンロード</a>
 </div>
 </div>
 <div class="col-lg d-none d-lg-block">
