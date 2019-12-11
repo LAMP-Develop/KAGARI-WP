@@ -5,7 +5,7 @@ function twpp_enqueue_styles()
 {
     wp_enqueue_style(
         'main-style',
-        get_template_directory_uri().'/lib/css/style.min.css',
+        get_template_directory_uri().'/lib/css/style.css',
         [],
         '1.0.0',
         'all'
@@ -19,7 +19,7 @@ function add_my_scripts()
     wp_deregister_script('jquery');
     wp_enqueue_script(
         'base-script',
-        get_template_directory_uri().'/lib/js/index.js',
+        get_template_directory_uri().'/lib/js/bundle.js',
         [],
         '1.0.0',
         true

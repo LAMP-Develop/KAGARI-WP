@@ -1,2 +1,2 @@
-# KAGARI WordPressテーマ「Report」
+# KAGARI WordPressテーマ
 

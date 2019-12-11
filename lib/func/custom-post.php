@@ -11,79 +11,38 @@ function create_post_type()
         'custom-fields'
     ];
     register_post_type(
-    'help',
+    'seminar',
       array(
-        'label' => 'ヘルプ',
+        'label' => 'セミナー',
         'labels' => array(
-           'all_items' => 'ヘルプ一覧',
+           'all_items' => 'セミナー一覧',
            ),
-        'description' => 'お客様用ヘルプ',
+        'description' => 'セミナー',
         'public' => true,
         'has_archive' => true,
         'supports' => $supports,
-        'show_in_rest' => true
+        'show_in_rest' => true,
+        'menu_position' => 5
       )
     );
     register_taxonomy(
-      'help_cat',
-      'help',
+      'seminar_cat',
+      'seminar',
       array(
         'label' => 'カテゴリー',
         'labels' => array(
           'all_items' => 'カテゴリー一覧',
           'add_new_item' => 'カテゴリーを追加'
         ),
-        'rewrite' => array('slug' => 'help'),
+        'rewrite' => array('slug' => 'seminar'),
         'with_front' => false,
         'hierarchical' => true,
         'show_in_rest' => true
       )
     );
     register_taxonomy(
-      'help_tag',
-      'help',
-      array(
-        'label' => 'タグ',
-        'labels' => array(
-          'all_items' => 'タグ一覧',
-          'add_new_item' => 'タグを追加'
-        ),
-        'hierarchical' => false,
-        'show_in_rest' => true
-      )
-    );
-    register_post_type(
-    'works',
-      array(
-        'label' => '導入事例',
-        'labels' => array(
-           'all_items' => '導入事例一覧',
-           ),
-        'description' => '導入事例用',
-        'public' => true,
-        'has_archive' => true,
-        'supports' => $supports,
-        'show_in_rest' => true
-      )
-    );
-    register_taxonomy(
-      'works_cat',
-      'works',
-      array(
-        'label' => 'カテゴリー',
-        'labels' => array(
-          'all_items' => 'カテゴリー一覧',
-          'add_new_item' => 'カテゴリーを追加'
-        ),
-        'rewrite' => array('slug' => 'works'),
-        'with_front' => false,
-        'hierarchical' => true,
-        'show_in_rest' => true
-      )
-    );
-    register_taxonomy(
-      'works_tag',
-      'works',
+      'seminar_tag',
+      'seminar',
       array(
         'label' => 'タグ',
         'labels' => array(
