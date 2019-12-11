@@ -13,7 +13,7 @@ $wp_url = get_template_directory_uri(); ?>
 <body>
 <!-- ヘッダー -->
 <header id="header">
-<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-md-3 py-2">
 <div class="container">
 <!-- ロゴ -->
 <a class="navbar-brand d-flex" href="<?php echo $home; ?>">

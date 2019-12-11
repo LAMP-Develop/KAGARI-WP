@@ -53,6 +53,49 @@ function create_post_type()
         'show_in_rest' => true
       )
     );
+    register_post_type(
+    'news',
+      array(
+        'label' => 'お知らせ',
+        'labels' => array(
+           'all_items' => 'お知らせ一覧',
+           ),
+        'description' => 'お知らせ',
+        'public' => true,
+        'has_archive' => true,
+        'supports' => $supports,
+        'show_in_rest' => true,
+        'menu_position' => 5
+      )
+    );
+    register_taxonomy(
+      'news_cat',
+      'news',
+      array(
+        'label' => 'カテゴリー',
+        'labels' => array(
+          'all_items' => 'カテゴリー一覧',
+          'add_new_item' => 'カテゴリーを追加'
+        ),
+        'rewrite' => array('slug' => 'news'),
+        'with_front' => false,
+        'hierarchical' => true,
+        'show_in_rest' => true
+      )
+    );
+    register_taxonomy(
+      'news_tag',
+      'news',
+      array(
+        'label' => 'タグ',
+        'labels' => array(
+          'all_items' => 'タグ一覧',
+          'add_new_item' => 'タグを追加'
+        ),
+        'hierarchical' => false,
+        'show_in_rest' => true
+      )
+    );
     flush_rewrite_rules(false);
 }
 add_action('init', 'create_post_type');
