@@ -43,14 +43,12 @@ gtag('config', 'UA-79537153-12');
 </div>
 </li> -->
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/seminar/">セミナー情報</a></li>
-<!-- <li class="nav-item dropdown">
+<li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ヘルプ</a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdown-2">
-<a class="dropdown-item" href="<?php echo $home; ?>/help/">すべて</a>
-<a class="dropdown-item" href="<?php echo $home; ?>/">カテゴリー</a>
-<a class="dropdown-item" href="<?php echo $home; ?>/">カテゴリー</a>
+<a class="dropdown-item" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
 </div>
-</li> -->
+</li>
 </ul>
 <ul class="navbar-nav ml-auto mt-md-0 mt-3">
 <!-- <li class="nav-item mr-md-4">

@@ -3,8 +3,40 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri(); ?>
 </main>
 <!-- フッター -->
-<footer id="footer" class="py-md-4 py-3 bg-white">
+<footer id="footer" class="bg-white">
+<section class="py-md-5 py-4 bg-dark">
 <div class="container">
+<div class="row mx-0">
+<div class="col-md col-6 mb-md-0 mb-3">
+<a class="text-white d-block mb-2" href="<?php echo $home; ?>/">KAGARI Report</a>
+<a class="text-white d-block mb-2" href="<?php echo $home; ?>/product/">機能紹介</a>
+<a class="text-white d-block mb-2" href="<?php echo $home; ?>/price/">料金プラン</a>
+<span class="text-white d-block mb-2">ヘルプ</span>
+<a class="text-white d-block mb-2" href="<?php echo $home; ?>/contact/">- お問い合わせ</a>
+</div>
+<div class="col-md col-6 mb-md-0 mb-3">
+<a class="text-white d-block mb-2" href="https://seo.kagari.ai/">KAGARI SEO</a>
+<a class="text-white d-block mb-2" href="https://seo.kagari.ai/functions/">機能紹介</a>
+<a class="text-white d-block mb-2" href="https://seo.kagari.ai/plan/">料金プラン</a>
+<a class="text-white d-block mb-2" href="https://seo.kagari.ai/case/">導入事例</a>
+<a class="text-white d-block mb-2" href="https://seo.kagari.ai/document-request/">資料請求</a>
+<span class="text-white d-block mb-2">ヘルプ</span>
+<a class="text-white d-block mb-2" href="https://seo.kagari.ai/faq/">- よくあるご質問</a>
+<a class="text-white d-block mb-2" href="https://seo.kagari.ai/contact/">- お問い合わせ</a>
+</div>
+<div class="col-md col-6">
+<a class="text-white d-block mb-2" href="https://marketing.kagari.ai/">KAGARI Marketing</a>
+<a class="text-white d-block mb-2" href="https://lamp.jp" target="_blank"><i class="fas fa-external-link-alt mr-1"></i>運営会社</a>
+<a class="text-white d-block mb-2" href="https://lamp.jp/recruit/" target="_blank"><i class="fas fa-external-link-alt mr-1"></i>採用情報</a>
+</div>
+<div class="col-md col-6">
+<a class="btn btn-success" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
+<!-- <a class="btn btn-outline-info" href="<?php echo $home; ?>/contact/">ログイン</a> -->
+</div>
+</div>
+</div>
+</section>
+<div class="container py-md-4 py-3">
 <div class="d-md-flex justify-content-between align-items-center">
 <div class="d-md-flex justify-content-start align-items-center">
 <a class="d-md-inline d-block mr-md-5 mb-md-0 mb-4 text-md-left text-center" href="<?php echo $home; ?>/">
