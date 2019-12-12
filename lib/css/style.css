@@ -7206,6 +7206,14 @@ h6 {
       @media (max-width: 991.98px) {
         .jumbotron-top p {
           font-size: 0.875rem; } }
+  .jumbotron-seminar {
+    background: url("../images/bg_sample.png") no-repeat center center;
+    background-size: cover; }
+  .jumbotron-news {
+    background: url("../images/bg_sample.png") no-repeat center center;
+    background-size: cover; }
+  .jumbotron-category {
+    padding: 4.375rem 0; }
   @media (max-width: 767.98px) {
     .jumbotron {
       padding: 4.375rem 0; } }
@@ -7216,23 +7224,38 @@ h6 {
 .card {
   border: 0; }
 
+.list-group-flush .list-group-item {
+  position: relative; }
+  .list-group-flush .list-group-item::after {
+    position: absolute;
+    content: '';
+    top: calc(50% - 3px);
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-top: solid 1px #2E4369;
+    border-right: solid 1px #2E4369;
+    transform: rotate(45deg);
+    transition: 0.2s; }
+
 .page-conent h2,
 .page-conent h3,
 .page-conent h4,
 .page-conent h5 {
-  color: #030F36;
   margin: 2em auto .5em auto; }
 
 .page-conent h2 {
+  padding-bottom: .5em;
   font-size: 1.53125rem;
-  border-bottom: solid 1px #030F36;
-  padding-bottom: .5em; }
+  border-bottom: solid 1px #030F36; }
 
 .page-conent h3 {
   box-sizing: border-box;
-  font-size: 1.3125rem;
   border-left: solid 3px #030F36;
-  padding-left: .5em; }
+  padding-left: .5em;
+  font-size: 1.3125rem; }
 
 .page-conent h4 {
   font-size: 1.1375rem; }

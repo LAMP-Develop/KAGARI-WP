@@ -17,7 +17,7 @@ function create_post_type()
         'labels' => array(
            'all_items' => 'セミナー一覧',
            ),
-        'description' => 'セミナー',
+        'description' => 'ウェブマーケティング手法を探している方や<br class="d-md-block d-none">マーケティング支援事業者様に向けて、<br class="d-md-block d-none">セミナーを実施しております。',
         'public' => true,
         'has_archive' => true,
         'supports' => $supports,
@@ -60,7 +60,7 @@ function create_post_type()
         'labels' => array(
            'all_items' => 'お知らせ一覧',
            ),
-        'description' => 'お知らせ',
+        'description' => 'KAGARIからのお知らせ一覧',
         'public' => true,
         'has_archive' => true,
         'supports' => $supports,

@@ -1,4 +1,12 @@
-body {
-  font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
-  font-size: 100%;
+* {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-flow: column-reverse;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  width: 180px;
+  padding: 1rem;
+  background-image: url(./lib/images/bg_mv.png);
+  background-size: cover;
 }

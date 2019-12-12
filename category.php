@@ -2,23 +2,46 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
-<section class="sec sec-bg-gray-3">
+<div class="jumbotron-category jumbotron m-0 bg-white">
 <div class="container">
-<h2 class="font-size-lg text-center text-dark font-weight-bold mb-md-5 mb-4"><?php single_cat_title(); ?></h2>
-<ul class="list-group">
-<?php if (have_posts()): while (have_posts()): the_post();
+<h2 class="h1 text-center text-primary font-weight-bold mb-4">
+<svg width="393" height="36" viewBox="0 0 393 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.27417 35H7.66617V24.728L11.5542 20.696L21.9702 35H30.8502L16.5462 15.656L30.2262 1.4H21.2982L7.66617 16.088V1.4H0.27417V35Z" fill="#FF725C"/><path d="M36.3192 35H43.8552L46.9272 27.464H61.1352L64.2072 35H71.9352L57.5352 1.16H50.7192L36.3192 35ZM49.5672 20.936L54.0312 10.04L58.4952 20.936H49.5672Z" fill="#FF725C"/><path d="M95.9408 35.576C102.085 35.576 106.837 33.176 110.293 30.248V15.656H95.7008V22.04H103.141V26.84C101.269 28.184 98.8688 28.856 96.1808 28.856C90.2288 28.856 86.0048 24.344 86.0048 18.2V18.104C86.0048 12.392 90.2768 7.64 95.6528 7.64C99.5408 7.64 101.845 8.88801 104.437 11.048L109.093 5.432C105.589 2.456 101.941 0.824005 95.8928 0.824005C85.7168 0.824005 78.2768 8.648 78.2768 18.2V18.296C78.2768 28.232 85.4768 35.576 95.9408 35.576Z" fill="#FF725C"/><path d="M119.325 35H126.861L129.933 27.464H144.141L147.213 35H154.941L140.541 1.16H133.725L119.325 35ZM132.573 20.936L137.037 10.04L141.501 20.936H132.573Z" fill="#FF725C"/><path d="M164.927 35H172.319V24.248H178.127L185.327 35H193.967L185.759 23C190.031 21.416 192.959 18.008 192.959 12.584V12.488C192.959 9.32 191.951 6.68 190.079 4.80801C187.871 2.60001 184.559 1.4 180.287 1.4H164.927V35ZM172.319 17.72V8.072H179.663C183.263 8.072 185.471 9.704 185.471 12.872V12.968C185.471 15.8 183.407 17.72 179.807 17.72H172.319Z" fill="#FF725C"/><path d="M204.751 35H212.143V1.4H204.751V35Z" fill="#FF725C"/><path d="M244.53 35H260.514C268.098 35 273.09 31.928 273.09 25.784V25.688C273.09 21.176 270.69 18.92 266.802 17.432C269.202 16.088 271.218 13.976 271.218 10.184V10.088C271.218 7.784 270.45 5.91201 268.914 4.37601C266.994 2.456 263.97 1.4 260.13 1.4H244.53V35ZM263.874 11.432C263.874 13.928 261.81 14.984 258.546 14.984H251.73V7.88001H259.026C262.146 7.88001 263.874 9.128 263.874 11.336V11.432ZM265.746 24.776V24.872C265.746 27.368 263.778 28.52 260.514 28.52H251.73V21.128H260.274C264.066 21.128 265.746 22.52 265.746 24.776Z" fill="#FF725C"/><path d="M283.971 35H308.115V28.28H291.363V1.4H283.971V35Z" fill="#FF725C"/><path d="M332.888 35.576C343.256 35.576 350.792 27.752 350.792 18.2V18.104C350.792 8.55201 343.352 0.824005 332.984 0.824005C322.616 0.824005 315.08 8.648 315.08 18.2V18.296C315.08 27.848 322.52 35.576 332.888 35.576ZM332.984 28.76C327.032 28.76 322.808 23.96 322.808 18.2V18.104C322.808 12.344 326.936 7.64 332.888 7.64C338.84 7.64 343.064 12.44 343.064 18.2V18.296C343.064 24.056 338.936 28.76 332.984 28.76Z" fill="#FF725C"/><path d="M378.325 35.576C384.469 35.576 389.221 33.176 392.677 30.248V15.656H378.085V22.04H385.525V26.84C383.653 28.184 381.253 28.856 378.565 28.856C372.613 28.856 368.389 24.344 368.389 18.2V18.104C368.389 12.392 372.661 7.64 378.037 7.64C381.925 7.64 384.229 8.88801 386.821 11.048L391.477 5.432C387.973 2.456 384.325 0.824005 378.277 0.824005C368.101 0.824005 360.661 8.648 360.661 18.2V18.296C360.661 28.232 367.861 35.576 378.325 35.576Z" fill="#FF725C"/></svg>
+</h2>
+<p class="text-md-center text-white m-0 text-secondary">WEBマーケティングのお役立ち情報をご紹介いたします。</p>
+</div>
+</div>
+<section class="py-5">
+<div class="container">
+<div class="row justify-content-between bg-white py-3 rounded-lg">
+<div class="col-md-8">
+<div class="post-listd-cards row">
+<?php
+if (have_posts()): while (have_posts()):
+the_post();
 $t = get_the_title();
-$time = get_field('seminar_time', get_the_ID());
-$p = get_field('seminar_url', get_the_ID());
+$p = get_the_permalink();
+if (has_post_thumbnail()) {
+    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
+} else {
+    $thumbnail = '';
+}
 ?>
-<li class="list-group-item rounded-0">
-<a class="row mx-0" href="<?php echo $p; ?>" class="text-decoration-none" target="_blank" rel="nofollow">
-<time class="px-md-3 px-0 col-md-2" datetime="<?php the_time('Y-m-d'); ?>" class="d-block text-secondary mb-1"><?php echo $time; ?></time>
-<p class="px-md-3 px-0 col-md-10 m-0 text-dark"><?php echo $t; ?></p>
-</a>
-</li>
+<div class="col-md-6 mb-3">
+<div class="card shadow-sm">
+<img class="card-img-top" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<div class="card-body">
+<p class="m-0"><?php echo $t; ?></p>
+<a href="<?php echo $p; ?>" class="stretched-link"></a>
+</div>
+</div>
+</div>
 <?php endwhile; endif; ?>
-</ul>
+</div>
+</div>
+<div class="col-md-4">
+<?php get_sidebar(); ?>
+</div>
+</div>
 </div>
 </section>
 <?php get_footer();

@@ -12,7 +12,7 @@ $wp_url = get_template_directory_uri(); ?>
 </head>
 <body>
 <!-- ヘッダー -->
-<header id="header">
+<header id="header" class="border-bottom">
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-md-3 py-2">
 <div class="container">
 <!-- ロゴ -->
@@ -41,16 +41,15 @@ $wp_url = get_template_directory_uri(); ?>
 </a>
 </div>
 </li>
-<li class="nav-item"><a class="nav-link text-dark" href="#">セミナー</a></li>
-<li class="nav-item"><a class="nav-link text-dark" href="#">お知らせ</a></li>
-<li class="nav-item"><a class="nav-link text-dark" href="#">ブログ</a></li>
-<li class="nav-item"><a class="nav-link text-dark" href="#">資料ダウンロード</a></li>
+<li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/seminar/">セミナー</a></li>
+<li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/news/">お知らせ</a></li>
+<li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/blog/">ブログ</a></li>
 </ul>
 <ul class="navbar-nav ml-auto mt-md-0 mt-3">
 <li class="nav-item mr-md-3"><a class="nav-link text-dark" href="#">資料請求</a></li>
 <li class="nav-item mr-md-3"><a class="nav-link text-primary" href="#" target="_blank">ログイン</a></li>
 <li class="nav-item">
-<a class="btn btn-primary" href="#">お問い合わせ</a>
+<a class="btn btn-primary" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
 </li>
 </ul>
 </div>
