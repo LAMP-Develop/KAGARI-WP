@@ -12,8 +12,8 @@ $wp_url = get_template_directory_uri(); ?>
 </head>
 <body>
 <!-- ヘッダー -->
-<header id="header" class="border-bottom">
-<nav class="navbar navbar-expand-lg navbar-light bg-white py-md-3 py-2">
+<header id="header" class="sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
 <div class="container">
 <!-- ロゴ -->
 <a class="navbar-brand d-flex" href="<?php echo $home; ?>">
@@ -49,7 +49,7 @@ $wp_url = get_template_directory_uri(); ?>
 <li class="nav-item mr-md-3"><a class="nav-link text-dark" href="#">資料請求</a></li>
 <li class="nav-item mr-md-3"><a class="nav-link text-primary" href="#" target="_blank">ログイン</a></li>
 <li class="nav-item">
-<a class="btn btn-primary" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
+<a class="btn btn-primary btn-sm" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
 </li>
 </ul>
 </div>
