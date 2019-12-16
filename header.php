@@ -13,6 +13,29 @@ $wp_url = get_template_directory_uri(); ?>
 <body>
 <!-- ヘッダー -->
 <header id="header" class="sticky-top shadow-sm">
+<?php
+if(!is_single()):
+$args = [
+    'posts_per_page' => 1,
+    'post_type' => 'campaign',
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'meta_key' => 'campaign_flag',
+    'meta_value' => true
+];
+$posts = get_posts($args);
+if ($posts):
+foreach ($posts as $post): setup_postdata($post);
+$id = get_the_ID();
+$t = get_field('campaign_ttl', $id);
+$p = get_field('campaign_url', $id);
+?>
+<div class="alert alert-light alert-dismissible fade show bg-dark2 border-0 m-0 rounded-0">
+<div class="container text-center">
+<p class="text-white m-0"><?php echo $t; ?><a class="ml-2 text-white" href="<?php echo $p; ?>" target="_blank"><small>詳しく見る<i class="fas fa-chevron-right ml-1"></i></small></a></p>
+</div>
+</div>
+<?php endforeach; endif; wp_reset_postdata(); endif; ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
 <div class="container">
 <!-- ロゴ -->

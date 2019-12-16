@@ -11,6 +11,21 @@ function create_post_type()
         'custom-fields'
     ];
     register_post_type(
+    'campaign',
+      array(
+        'label' => 'キャンペーン',
+        'labels' => array(
+           'all_items' => 'キャンペーン一覧',
+           ),
+        'description' => '',
+        'public' => true,
+        'has_archive' => true,
+        'supports' => $supports,
+        'show_in_rest' => false,
+        'menu_position' => 5
+      )
+    );
+    register_post_type(
     'seminar',
       array(
         'label' => 'セミナー',
