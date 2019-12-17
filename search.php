@@ -1,7 +1,13 @@
 <?php
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
-get_header(); ?>
+get_header();
+if (isset( $_GET['s'])) {
+    $search = $_GET['s'];
+} else {
+    $search = '';
+}
+?>
 <div class="jumbotron-category jumbotron m-0">
 <div class="container">
 <h2 class="h1 text-center text-primary font-weight-bold mb-4">
@@ -14,6 +20,8 @@ get_header(); ?>
 <div class="container">
 <div class="row justify-content-between bg-white py-4 px-2 rounded-lg">
 <div class="col-md-8">
+<p class="mb-0">キーワード</p>
+<p class="h4 text-dark font-weight-bold mb-4"><?php echo $search ?></p>
 <div class="post-listd-cards row">
 <?php
 if (have_posts()): while (have_posts()):

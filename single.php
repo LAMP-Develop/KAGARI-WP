@@ -14,20 +14,41 @@ if (has_post_thumbnail()) {
     $thumbnail = '';
 }
 ?>
-<section class="sec sec-bg-dark">
+<div class="jumbotron-category jumbotron m-0">
 <div class="container">
-<h2 class="h3 text-center text-white font-weight-bold mb-md-5 mb-4"><?php echo $t; ?></h2>
-<figure class="d-block figure mb-0 mx-auto p-0">
-<img class="figure-img img-fluid rounded-lg shadow-sm mx-auto d-block col-6 p-0" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<h2 class="h1 text-center text-primary font-weight-bold mb-4">
+<img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/blog_mv.svg" alt="KAGARI Blog">
+</h2>
+<p class="text-center m-0">WEBマーケティングのお役立ち情報を<br class="d-md-none">ご紹介いたします。</p>
+</div>
+</div>
+<section class="pt-3 pb-5">
+<div class="container">
+<div class="row justify-content-between bg-white py-4 px-md-2 rounded-lg">
+<div class="col-md-8">
+<article class="post px-md-3 py-4">
+<div>
+<div class="mb-3">
+<i class="far fa-calendar mr-1"></i><?php the_time('Y/m/d');?>
+<?php if(get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')):?>
+  <i class="fas fa-redo mr-1 ml-3"></i><?php the_modified_date('Y/m/d') ?>
+<?php endif;?>
+</div>
+<h1 class="h3 text-dark font-weight-bold mb-md-4 mb-3"><?php echo $t; ?></h2>
+<figure class="d-block figure w-100 p-0">
+<img class="figure-img img-fluid w-100 d-block p-0" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
 </figure>
 </div>
-</section>
-<article class="post sec pt-0">
-<div class="container">
-<div class="position-relative mt-n5 card border-0 bg-white p-md-5 p-4 shadow-sm">
+<div class="page-content">
 <?php the_content(); ?>
 </div>
-</div>
 </article>
+</div>
+<div class="col-md-4">
+<?php get_sidebar(); ?>
+</div>
+</div>
+</div>
+</section>
 <?php endwhile; endif; ?>
 <?php get_footer();

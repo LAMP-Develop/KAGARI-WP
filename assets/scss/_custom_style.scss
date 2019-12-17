@@ -38,17 +38,31 @@ h5 {
   }
 }
 
+.lead {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.bg {
+  &-fa {
+    background-color: $body-bg-2;
+  }
+}
+
 .jumbotron {
-  padding: $jumbotron-padding 0;
+  padding: $jumbotron-padding 0 $jumbotron-padding*1.5;
   margin: 0;
   border-radius: 0;
 
   &-top {
     background: url("../images/bg_mv.png") no-repeat center center;
     background-size: cover;
+    padding: $jumbotron-padding*1.75 0 $jumbotron-padding*1.875;
 
     .h1 {
       line-height: 1.5;
+      font-size: 2.5rem;
     }
 
     p {
@@ -57,6 +71,14 @@ h5 {
         font-size: $font-size-base;
       }
     }
+
+    .btn {
+      min-width: 200px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: $jumbotron-padding/1.25 0 $jumbotron-padding*1.2;
   }
 
   &-seminar {
@@ -70,10 +92,12 @@ h5 {
   }
 
   &-category {
-    padding: $jumbotron-padding / 2 0;
-  }
-  @include media-breakpoint-down(sm) {
-    padding: $jumbotron-padding / 2 0;
+    padding: $jumbotron-padding 0;
+    background: url("../images/bg_blog@2x.png") no-repeat center center;
+    background-size: cover;
+    @include media-breakpoint-down(sm) {
+      padding: $jumbotron-padding/1.25 0;
+    }
   }
 }
 
@@ -85,16 +109,6 @@ h5 {
   line-height: 1;
 }
 
-.navbar {
-  @include media-breakpoint-up(sm) {
-    padding: ($font-size-base) 0;
-  }
-}
-
-.card {
-  border: 0;
-}
-
 .list-group-flush {
   .list-group-item {
     position: relative;
@@ -103,7 +117,7 @@ h5 {
       position: absolute;
       content: '';
       top: calc(50% - 3px);
-      right: 0;
+      right: .5rem;
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       width: 5px;
@@ -128,7 +142,108 @@ h5 {
     background-color: rgba(255, 73, 13, 0.1);
     border-color: $primary;
   }
+  &-outline-info:hover {
+    color: $info;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
+}
+
+.card {
+  border: 0;
+  pointer-events : none;
+  transition: .2s;
+  .card-title {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    line-height: 1.5;
+  }
+  a {
+    pointer-events : auto;
+  }
+  &:hover {
+    opacity: .85;
+  }
+}
+
+// .post-listd-cards .card {
+//   transition: .2s;
+//
+//   &:hover {
+//     opacity: .85;
+//   }
+// }
+
+.navbar {
+  @include media-breakpoint-up(sm) {
+    padding: ($font-size-base) 0;
+  }
+  &-toggler-icon {
+    background-image: none !important;
+  }
+
+  &-brand {
+    line-height: 1;
+    transition: .2s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .text-dark{
+    transition: .2s;
+    &:hover {
+      color: $dark !important;
+      opacity: 0.5;
+    }
+  }
+  .service-menu {
+    @include media-breakpoint-up(lg) {
+      min-width: 430px;
+    }
+  }
+}
+
+.dropdown-menu {
+  padding: 1rem 0;
+  margin: 0.125rem 0 0;
+  color: $dark;
+  border: none;
+  border-radius: 0;
+  @include media-breakpoint-up(lg) {
+    box-shadow: $shadow-base, $shadow-add;
+  }
+
+  .dropdown-item {
+    padding: 0.5rem 1.5rem;
+    color: $dark;
+  }
+
+  .service-logo {
+    width: 180px;
+
+    img {
+      height: 20px;
+    }
+  }
+}
+
+.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.shadow {
+  box-shadow: $shadow-base, $shadow-add !important;
+
+  &-sm {
+    box-shadow: $shadow-base, $shadow-add-sm !important;
+  }
+}
+
+a:hover {
+  color: $primary;
+  text-decoration: underline;
 }
