@@ -1,13 +1,16 @@
 .page-content {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", sans-serif;
+  -webkit-font-smoothing: antialiased;
+
   h2,
   h3,
   h4,
   h5 {
-    margin: 2em auto .5em auto;
+    margin: 2em auto 0.5em;
   }
 
   h2 {
-    padding-bottom: .5em;
+    padding-bottom: 0.5em;
     margin-top: 3.5rem;
     margin-bottom: 1.5rem;
     font-size: $font-size-base*1.5;
@@ -21,7 +24,7 @@
     margin-bottom: 1.5rem;
     box-sizing: border-box;
     border-left: solid 2px $dark-2;
-    padding-left: .5em;
+    padding: 0.5em 0.5em;
     font-size: $font-size-base*1.5;
     color: $dark;
     font-weight: bold;
@@ -38,11 +41,18 @@
     color: $dark;
   }
 
-  p, td, li {
+  li,
+  p,
+  td {
+    color: #111111;
     font-size: 1rem;
     line-height: 1.9;
     @include media-breakpoint-down(sm) {
       font-size: $font-size-base;
     }
+  }
+
+  img {
+    margin: 1.5rem auto;
   }
 }

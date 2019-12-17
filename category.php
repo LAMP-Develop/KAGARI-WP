@@ -26,8 +26,8 @@ if (has_post_thumbnail()) {
     $thumbnail = '';
 }
 ?>
-<div class="col-md-6 mb-3">
-<div class="card shadow-sm">
+<div class="col-md-6 mb-4">
+<div class="card shadow-sm h-100">
 <img class="card-img-top" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
 <div class="card-body">
 <p class="m-0"><?php echo $t; ?></p>
