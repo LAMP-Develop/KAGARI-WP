@@ -7,7 +7,8 @@ while (have_posts()): the_post();
 $t = get_the_title();
 $category = get_the_category();
 $posttags = get_the_tags();
-$time = get_the_time('Y-m-d');
+$time = get_the_time('Y/m/d');
+$modified_time = get_the_modified_date('Y/m/d');
 if (has_post_thumbnail()) {
     $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
 } else {
@@ -24,14 +25,15 @@ if (has_post_thumbnail()) {
 </div>
 <section class="pt-3 pb-5">
 <div class="container">
-<div class="row justify-content-between bg-white py-4 px-md-3 rounded-lg">
+<div class="row justify-content-between bg-white py-4 px-md-3">
 <div class="col-md-8">
 <article class="post px-md-3 py-4">
 <div class="mb-5">
 <div class="mb-3">
-<i class="far fa-calendar mr-1"></i><?php the_time('Y/m/d');?>
-<?php if(get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')):?>
-  <i class="fas fa-redo mr-1 ml-3"></i><?php the_modified_date('Y/m/d') ?>
+<p class="mb-1"><i class="far fa-folder mr-1"></i><?php echo $category[0]->cat_name; ?></p>
+<i class="far fa-calendar mr-1"></i><?php echo $time ?>
+<?php if($time != $modified_time):?>
+<i class="fas fa-redo mr-1 ml-3"></i><?php echo $modified_time ?>
 <?php endif;?>
 </div>
 <h1 class="h3 text-dark font-weight-bold mb-md-4 mb-3"><?php echo $t; ?></h2>

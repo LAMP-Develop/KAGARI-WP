@@ -7235,7 +7235,7 @@ body {
     background-size: cover; }
     @media (max-width: 767.98px) {
       .jumbotron-category {
-        padding: 4rem 0; } }
+        padding: 2.5rem 0; } }
 
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(3, 15, 54, 1)' stroke-width='2' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
@@ -7287,28 +7287,26 @@ body {
   .card:hover {
     opacity: .85; }
 
-@media (min-width: 576px) {
-  .navbar {
-    padding: 0.875rem 0; } }
-
-.navbar-toggler-icon {
-  background-image: none !important; }
-
-.navbar-brand {
-  line-height: 1;
-  transition: .2s; }
-  .navbar-brand:hover {
-    opacity: 0.5; }
-
-.navbar .text-dark {
-  transition: .2s; }
-  .navbar .text-dark:hover {
-    color: #030F36 !important;
-    opacity: 0.5; }
-
-@media (min-width: 992px) {
-  .navbar .service-menu {
-    min-width: 430px; } }
+.navbar {
+  z-index: 1030; }
+  @media (min-width: 576px) {
+    .navbar {
+      padding: 0.875rem 0; } }
+  .navbar-toggler-icon {
+    background-image: none !important; }
+  .navbar-brand {
+    line-height: 1;
+    transition: .2s; }
+    .navbar-brand:hover {
+      opacity: 0.5; }
+  .navbar .text-dark {
+    transition: .2s; }
+    .navbar .text-dark:hover {
+      color: #030F36 !important;
+      opacity: 0.5; }
+  @media (min-width: 992px) {
+    .navbar .service-menu {
+      min-width: 430px; } }
 
 .dropdown-menu {
   padding: 1rem 0;
@@ -7341,7 +7339,13 @@ a:hover {
 
 .page-content {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", sans-serif;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  color: #111111;
+  font-size: 1rem;
+  line-height: 1.9; }
+  @media (max-width: 767.98px) {
+    .page-content {
+      font-size: 0.875rem; } }
   .page-content h2,
   .page-content h3,
   .page-content h4,
@@ -7371,17 +7375,13 @@ a:hover {
   .page-content h5 {
     font-size: 0.9625rem;
     color: #030F36; }
-  .page-content li,
-  .page-content p,
-  .page-content td {
-    color: #111111;
-    font-size: 1rem;
-    line-height: 1.9; }
-    @media (max-width: 767.98px) {
-      .page-content li,
-      .page-content p,
-      .page-content td {
-        font-size: 0.875rem; } }
   .page-content img {
     margin: 1.5rem auto; }
+  .page-content tr {
+    border-top: solid 1px #e5e5e5;
+    border-bottom: solid 1px #e5e5e5; }
+    .page-content tr:nth-child(odd) {
+      background-color: #fafafa; }
+  .page-content td {
+    padding: .5rem; }
 
