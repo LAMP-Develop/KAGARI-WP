@@ -7,8 +7,6 @@ $wp_url = get_template_directory_uri(); ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <?php wp_head(); ?>
-<?php if (!is_user_logged_in()): ?>
-<?php endif; ?>
 </head>
 <body>
 <!-- ヘッダー -->
@@ -55,7 +53,7 @@ $p = get_field('campaign_url', $id);
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">サービス</a>
 <div class="dropdown-menu service-menu mt-0" aria-labelledby="navbarDropdown-1">
-<a class="dropdown-item" href="#" target="_blank">
+<a class="dropdown-item" href="http://lamp-inc.sakura.ne.jp/kagari_re/report/" target="_blank">
 <div class="row no-gutters">
 <div class="col-md-6 service-logo">
 <img src="<?php echo $wp_url; ?>/lib/images/logo_report.svg" alt="KAGARI Report">
@@ -63,7 +61,7 @@ $p = get_field('campaign_url', $id);
 <p class="col-md-6 text-body mt-1 mt-md-0 mb-0">レポート作成ツール</p>
 </div>
 </a>
-<a class="dropdown-item" href="#" target="_blank">
+<a class="dropdown-item" href="http://lamp-inc.sakura.ne.jp/kagari_re/seo/" target="_blank">
 <div class="row no-gutters">
 <div class="col-md-6 service-logo">
 <img src="<?php echo $wp_url; ?>/lib/images/logo_seo.svg" alt="KAGARI SEO">
@@ -71,7 +69,7 @@ $p = get_field('campaign_url', $id);
 <p class="col-md-6 text-body mt-1 mt-md-0 mb-0">SEO解析ツール</p>
 </div>
 </a>
-<a class="dropdown-item" href="#" target="_blank">
+<a class="dropdown-item" href="https://consulting.kagari.ai" target="_blank">
 <div class="row no-gutters">
 <div class="col-md-6 service-logo">
 <img src="<?php echo $wp_url; ?>/lib/images/logo_consulting.svg" alt="KAGARI Consulting">
@@ -79,7 +77,7 @@ $p = get_field('campaign_url', $id);
 <p class="col-md-6 text-body mt-1 mt-md-0 mb-0">WEBコンサルティング</p>
 </div>
 </a>
-<a class="dropdown-item" href="#" target="_blank">
+<a class="dropdown-item" href="https://marketing.lamp.jp" target="_blank">
 <div class="row no-gutters">
 <div class="col-md-6 service-logo">
 <img src="<?php echo $wp_url; ?>/lib/images/logo_marketing.svg" alt="KAGARI Markting">
@@ -94,8 +92,8 @@ $p = get_field('campaign_url', $id);
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/blog/">ブログ</a></li>
 </ul>
 <ul class="navbar-nav ml-auto mt-md-0 mt-3">
-<li class="nav-item mr-md-3"><a class="nav-link text-dark" href="#">資料請求</a></li>
-<li class="nav-item mr-md-3"><a class="nav-link text-primary" href="#" target="_blank">ログイン</a></li>
+<li class="nav-item mr-md-3"><a class="nav-link text-dark" href="<?php echo $home; ?>/document-request/">資料請求</a></li>
+<li class="nav-item mr-md-3"><a class="nav-link text-primary" href="https://reporting.kagari.ai" target="_blank">ログイン</a></li>
 <li class="nav-item mt-3 mt-lg-0">
 <a class="btn btn-primary btn-sm" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
 </li>

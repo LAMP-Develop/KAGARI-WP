@@ -16,7 +16,9 @@ add_action('wp_enqueue_scripts', 'twpp_enqueue_styles');
 // JSの管理
 function add_my_scripts()
 {
-    wp_deregister_script('jquery');
+    if (!is_page('contact') && !is_page('document-request')) {
+        wp_deregister_script('jquery');
+    }
     wp_enqueue_script(
         'base-script',
         get_template_directory_uri().'/lib/js/bundle.js',

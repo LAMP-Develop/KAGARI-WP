@@ -5,27 +5,6 @@ import '../scss/style.scss';
 import '../vendor/font-awesome/js/all.min.js';
 import 'bootstrap';
 
-// ナビゲーションバーのドロップダウンをホバーで開く
-// function toggleDropdown (e) {
-//   const _d = $(e.target).closest('.dropdown'),
-//     _m = $('.dropdown-menu', _d);
-//   setTimeout(function(){
-//     const shouldOpen = e.type !== 'click' && _d.is(':hover');
-//     _m.toggleClass('show', shouldOpen);
-//     _d.toggleClass('show', shouldOpen);
-//     $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-//   }, e.type === 'mouseleave' ? 50 : 0);
-// }
-//
-// $(function($) {
-//   var w = $(window).outerWidh();
-//   if (w > 425) {
-//     $('.dropdown-menu a').on('mouseenter mouseleave', toggleDropdown);
-//   } else {
-//     $('.dropdown-menu a').on('click', toggleDropdown);
-//   }
-// });
-
 const $dropdown = $(".dropdown");
 const $dropdownToggle = $(".dropdown-toggle");
 const $dropdownMenu = $(".dropdown-menu");
@@ -51,3 +30,20 @@ $(window).on("load resize", function() {
     $dropdown.off("mouseenter mouseleave");
   }
 });
+
+// CF7
+$('button.form-btn').on('click', function() {
+  let name = $(this).attr('data-name');
+  $('#document-form input#document-name').val(name);
+});
+
+let wpcf7Elm = document.querySelector('.wpcf7');
+wpcf7Elm.addEventListener('wpcf7mailsent', function(event) {
+  let inputs = event.detail.inputs;
+  for (let i = 0; i < inputs.length; i++) {
+    if ('document' == inputs[i].name) {
+      console.log(inputs[i].value);
+      break;
+    }
+  }
+}, false);

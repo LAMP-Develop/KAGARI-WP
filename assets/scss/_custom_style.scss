@@ -95,6 +95,11 @@ body {
     background-size: cover;
   }
 
+  &-works {
+    background: url("../images/bg_sample.png") no-repeat center center;
+    background-size: cover;
+  }
+
   &-category {
     padding: $jumbotron-padding 0;
     background: url("../images/bg_blog@2x.png") no-repeat center center;
@@ -172,14 +177,6 @@ body {
     opacity: .85;
   }
 }
-
-// .post-listd-cards .card {
-//   transition: .2s;
-//
-//   &:hover {
-//     opacity: .85;
-//   }
-// }
 
 .navbar {
   @include media-breakpoint-up(sm) {

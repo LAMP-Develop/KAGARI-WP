@@ -8,30 +8,26 @@ $wp_url = get_template_directory_uri(); ?>
 <div class="container">
 <div class="row mx-0">
 <div class="col-md col-6 mb-md-0 mb-3">
-<a class="text-white d-block mb-3" href="https://seo.kagari.ai/">KAGARI SEO</a>
-<a class="text-white d-block mb-3" href="https://seo.kagari.ai/functions/">機能紹介</a>
-<a class="text-white d-block mb-3" href="https://seo.kagari.ai/plan/">料金プラン</a>
-<a class="text-white d-block mb-3" href="https://seo.kagari.ai/case/">導入事例</a>
-<a class="text-white d-block mb-3" href="https://seo.kagari.ai/document-request/">資料請求</a>
-<span class="text-white d-block mb-3">ヘルプ</span>
-<a class="text-white d-block mb-3" href="https://seo.kagari.ai/faq/">- よくあるご質問</a>
-<a class="text-white d-block mb-3" href="https://seo.kagari.ai/contact/">- お問い合わせ</a>
+<a class="text-white d-block mb-3" href="http://lamp-inc.sakura.ne.jp/kagari_re/seo/">KAGARI SEO</a>
+<a class="text-white d-block mb-3" href="http://lamp-inc.sakura.ne.jp/kagari_re/seo/functions/">機能紹介</a>
+<a class="text-white d-block mb-3" href="http://lamp-inc.sakura.ne.jp/kagari_re/seo/plan/">料金プラン</a>
+<a class="text-white d-block mb-3" href="http://lamp-inc.sakura.ne.jp/kagari_re/seo/document-request/">資料請求</a>
 </div>
 <div class="col-md col-6 mb-md-0 mb-3">
-<a class="text-white d-block mb-3" href="<?php echo $home; ?>/">KAGARI Report</a>
-<a class="text-white d-block mb-3" href="<?php echo $home; ?>/product/">機能紹介</a>
-<a class="text-white d-block mb-3" href="<?php echo $home; ?>/price/">料金プラン</a>
-<span class="text-white d-block mb-3">ヘルプ</span>
-<a class="text-white d-block mb-3" href="<?php echo $home; ?>/contact/">- お問い合わせ</a>
+<a class="text-white d-block mb-3" href="http://lamp-inc.sakura.ne.jp/kagari_re/report/">KAGARI Report</a>
+<a class="text-white d-block mb-3" href="http://lamp-inc.sakura.ne.jp/kagari_re/report/product/">機能紹介</a>
+<a class="text-white d-block mb-3" href="http://lamp-inc.sakura.ne.jp/kagari_re/report/price/">料金プラン</a>
+<a class="text-white d-block mb-3" href="http://lamp-inc.sakura.ne.jp/kagari_re/report/document-request/">資料請求</a>
 </div>
 <div class="col-md col-6 mb-3">
-<a class="text-white d-block mb-3" href="https://marketing.kagari.ai/">KAGARI Marketing</a>
+<a class="text-white d-block mb-3" href="https://consulting.kagari.ai/">KAGARI Consulting</a>
+<a class="text-white d-block mb-3" href="https://marketing.lamp.jp/">KAGARI Marketing</a>
 <a class="text-white d-block mb-3" href="https://lamp.jp" target="_blank"><i class="fas fa-external-link-alt mr-1"></i>運営会社</a>
 <a class="text-white d-block mb-3" href="https://lamp.jp/recruit/" target="_blank"><i class="fas fa-external-link-alt mr-1"></i>採用情報</a>
 </div>
 <div class="col-md col-12">
-<a class="btn btn-success w-100" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
-<!-- <a class="btn btn-outline-info" href="<?php echo $home; ?>/contact/">ログイン</a> -->
+<a class="btn btn-success w-100 mb-3" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
+<a class="btn btn-outline-info w-100" href="https://reporting.kagari.ai" target="_blank">ログイン</a>
 </div>
 </div>
 </div>
@@ -51,14 +47,5 @@ $wp_url = get_template_directory_uri(); ?>
 </div>
 </footer>
 <?php wp_footer(); ?>
-<?php if (!is_user_logged_in()): ?>
-<script>
-(function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
-w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
-m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://tenzk.net/mtc.js?uid=8281348eaee5abe544377e8a30f6a3db9ed9bc41','mt');
-mt('send', 'pageview', {"uid":"8281348eaee5abe544377e8a30f6a3db9ed9bc41"});
-</script>
-<?php endif; ?>
 </body>
 </html>

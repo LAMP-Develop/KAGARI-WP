@@ -36,38 +36,38 @@ function create_post_type()
         'public' => true,
         'has_archive' => true,
         'supports' => $supports,
-        'show_in_rest' => true,
+        'show_in_rest' => false,
         'menu_position' => 5
       )
     );
-    register_taxonomy(
-      'seminar_cat',
-      'seminar',
-      array(
-        'label' => 'カテゴリー',
-        'labels' => array(
-          'all_items' => 'カテゴリー一覧',
-          'add_new_item' => 'カテゴリーを追加'
-        ),
-        'rewrite' => array('slug' => 'seminar'),
-        'with_front' => false,
-        'hierarchical' => true,
-        'show_in_rest' => true
-      )
-    );
-    register_taxonomy(
-      'seminar_tag',
-      'seminar',
-      array(
-        'label' => 'タグ',
-        'labels' => array(
-          'all_items' => 'タグ一覧',
-          'add_new_item' => 'タグを追加'
-        ),
-        'hierarchical' => false,
-        'show_in_rest' => true
-      )
-    );
+    // register_taxonomy(
+    //   'seminar_cat',
+    //   'seminar',
+    //   array(
+    //     'label' => 'カテゴリー',
+    //     'labels' => array(
+    //       'all_items' => 'カテゴリー一覧',
+    //       'add_new_item' => 'カテゴリーを追加'
+    //     ),
+    //     'rewrite' => array('slug' => 'seminar'),
+    //     'with_front' => false,
+    //     'hierarchical' => true,
+    //     'show_in_rest' => true
+    //   )
+    // );
+    // register_taxonomy(
+    //   'seminar_tag',
+    //   'seminar',
+    //   array(
+    //     'label' => 'タグ',
+    //     'labels' => array(
+    //       'all_items' => 'タグ一覧',
+    //       'add_new_item' => 'タグを追加'
+    //     ),
+    //     'hierarchical' => false,
+    //     'show_in_rest' => true
+    //   )
+    // );
     register_post_type(
     'news',
       array(
