@@ -35,9 +35,11 @@ if (has_post_thumbnail()) {
 <?php endif;?>
 </div>
 <h1 class="h3 text-dark font-weight-bold mb-md-4 mb-3"><?php echo $t; ?></h2>
+<?php if ($thumbnail != ''): ?>
 <figure class="d-block figure w-100 p-0">
 <img class="figure-img img-fluid w-100 d-block p-0" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
 </figure>
+<?php endif; ?>
 </div>
 <div class="page-content">
 <?php the_content(); ?>

@@ -195,12 +195,14 @@ $t = get_the_title();
 $p = get_the_permalink();
 if (has_post_thumbnail()) {
     $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
+} else {
+    $thumbnail = '';
 }
 ?>
 <div class="col-md-4 col-lg-3 mb-md-0 mb-4">
 <div class="card shadow-sm">
-<?php if (isset($thumbnail) || $thumbnail): ?>
-<img class="card-img-top border-bottom" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<?php if ($thumbnail != ''): ?>
+<img class="card-img-top" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
 <?php endif; ?>
 <div class="card-body">
 <p class="m-0"><?php echo $t; ?></p>

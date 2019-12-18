@@ -28,7 +28,9 @@ if (has_post_thumbnail()) {
 ?>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm h-100">
+<?php if ($thumbnail != ''): ?>
 <img class="card-img-top" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<?php endif; ?>
 <div class="card-body">
 <p class="m-0"><?php echo $t; ?></p>
 <a href="<?php echo $p; ?>" class="stretched-link"></a>
