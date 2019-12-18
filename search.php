@@ -20,7 +20,7 @@ if (isset( $_GET['s'])) {
 <div class="container">
 <div class="row justify-content-between bg-white py-4 px-2 rounded-lg">
 <div class="col-md-8">
-<p class="mb-0">キーワード</p>
+<p class="mb-0">検索キーワード</p>
 <p class="h4 text-dark font-weight-bold mb-4"><?php echo $search ?></p>
 <div class="post-listd-cards row">
 <?php
@@ -36,7 +36,9 @@ if (has_post_thumbnail()) {
 ?>
 <div class="col-md-6 mb-4">
 <div class="card shadow-sm">
+<?php if ($thumbnail != ''): ?>
 <img class="card-img-top" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<?php endif; ?>
 <div class="card-body">
 <p class="m-0"><?php echo $t; ?></p>
 <a href="<?php echo $p; ?>" class="stretched-link"></a>

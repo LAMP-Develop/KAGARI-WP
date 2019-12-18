@@ -30,8 +30,8 @@ if (has_post_thumbnail()) {
 <div class="mb-5">
 <div class="mb-3">
 <i class="far fa-calendar mr-1"></i><?php the_time('Y/m/d');?>
-<?php if(get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')):?>
-  <i class="fas fa-redo mr-1 ml-3"></i><?php the_modified_date('Y/m/d') ?>
+<?php if(get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')): ?>
+<i class="fas fa-redo mr-1 ml-3"></i><?php the_modified_date('Y/m/d'); ?>
 <?php endif;?>
 </div>
 <h1 class="h3 text-dark font-weight-bold mb-md-4 mb-3"><?php echo $t; ?></h2>

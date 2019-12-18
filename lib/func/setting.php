@@ -110,3 +110,14 @@ add_filter('allow_major_auto_core_updates', '__return_false');
 add_filter('allow_minor_auto_core_updates', '__return_true');
 add_filter('auto_update_theme', '__return_false');
 add_filter('auto_update_plugin', '__return_false');
+
+
+// 特定のカテゴリ（ブログ）のみを検索対象にする
+function search_filter($query)
+{
+    if (!is_admin() && $query->is_main_query() && $query->is_search()) {
+        $query->set('category_name', 'blog');
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'search_filter');

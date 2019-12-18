@@ -111,6 +111,36 @@ function create_post_type()
         'show_in_rest' => true
       )
     );
+    register_post_type(
+    'works',
+      array(
+        'label' => '導入事例',
+        'labels' => array(
+           'all_items' => '導入事例一覧',
+           ),
+        'description' => '導入事例',
+        'public' => true,
+        'has_archive' => true,
+        'supports' => $supports,
+        'show_in_rest' => true,
+        'menu_position' => 5
+      )
+    );
+    register_taxonomy(
+      'works_cat',
+      'works',
+      array(
+        'label' => 'カテゴリー',
+        'labels' => array(
+          'all_items' => 'カテゴリー一覧',
+          'add_new_item' => 'カテゴリーを追加'
+        ),
+        'rewrite' => array('slug' => 'works'),
+        'with_front' => false,
+        'hierarchical' => true,
+        'show_in_rest' => true
+      )
+    );
     flush_rewrite_rules(false);
 }
 add_action('init', 'create_post_type');

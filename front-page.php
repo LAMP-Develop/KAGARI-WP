@@ -7,7 +7,7 @@ get_header(); ?>
 <h2 class="h1 text-md-center text-white font-weight-bold mb-4">もっと身近に<br>デジタルマーケ<br class="d-md-none">ティング。</h2>
 <p class="lead text-md-center text-white m-0">KAGARIは貴社の成長に必要なデジタルマーケティングを支援する<br class="d-md-block d-none">プロダクトやサービスを提供します。</p>
 <div class="d-flex flex-wrap justify-content-center mt-5">
-<a class="btn btn-success mb-3 mb-md-0 mr-md-4" href="#">資料ダウンロード</a>
+<a class="btn btn-success mb-3 mb-md-0 mr-md-4" href="<?php echo $home; ?>/document-request/">資料ダウンロード</a>
 <a class="btn btn-success" href="<?php echo $home; ?>/seminar/">セミナー一覧</a>
 </div>
 </div>
@@ -46,7 +46,7 @@ get_header(); ?>
 <h3 class="card-title text-dark font-weight-bold">WEBサイトのアクセス解析<br class="d-none d-xl-block">レポートをAIが自動作成</h3>
 <p class="card-text">時間と手間のかかる解析レポートを自動で作成。Google Analyticsと連携してすぐに使えます。</p>
 <p class="card-text mt-4">
-<a href="#" class="stretched-link">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="http://lamp-inc.sakura.ne.jp/kagari_re/report/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </p>
 </div>
 </div>
@@ -65,7 +65,7 @@ get_header(); ?>
 <h3 class="card-title text-dark font-weight-bold">ページごとの比較に特化した<br class="d-none d-xl-block">SEO流入分析ツール</h3>
 <p class="card-text">Google AnalyticsとSearch Consoleのデータを1つの画面で管理。大量のページを一度に解析できます。</p>
 <p class="card-text mt-4">
-<a href="#" class="stretched-link">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="http://lamp-inc.sakura.ne.jp/kagari_re/report/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </p>
 </div>
 </div>
@@ -84,7 +84,7 @@ get_header(); ?>
 <h3 class="card-title text-dark font-weight-bold">データからCVを創出する<br class="d-none d-xl-block">コンサルティング</h3>
 <p class="card-text">KAGARIの解析データに基づいて、貴社の成長に合わせた最適なプランニングやコンテンツ制作を行います。</p>
 <p class="card-text mt-4">
-<a href="#" class="stretched-link">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="https://consulting.kagari.ai/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </p>
 </div>
 </div>
@@ -103,7 +103,7 @@ get_header(); ?>
 <h3 class="card-title text-dark font-weight-bold">デジタルコンテンツを軸とした<br class="d-none d-xl-block">マーケティング支援</h3>
 <p class="card-text">KAGARIの解析データに基づいて、貴社の成長に合わせた最適なプランニングやコンテンツ制作を行います。</p>
 <p class="card-text mt-4">
-<a href="#" class="stretched-link">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="http://lamp-inc.sakura.ne.jp/kagari_re/marketing/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </p>
 </div>
 </div>
@@ -118,36 +118,36 @@ get_header(); ?>
 <div class="container">
 <h2 class="h3 text-center text-white font-weight-bold mb-4">事例</h2>
 <div class="post-listd-cards row justify-content-center">
+<?php
+$args = [
+    'posts_per_page' => 3,
+    'post_type' => 'works',
+    'orderby' => 'date',
+    'order' => 'DESC'
+];
+$posts = get_posts($args);
+foreach ($posts as $post): setup_postdata($post);
+$t = get_the_title();
+$p = get_the_permalink();
+if (has_post_thumbnail()) {
+    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
+}
+?>
 <div class="col-md-4 col-lg-3 mb-md-0 mb-4">
 <div class="card shadow-sm">
-<svg class="card-img-top border-bottom" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+<?php if (isset($thumbnail) || $thumbnail): ?>
+<img class="card-img-top border-bottom" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<?php endif; ?>
 <div class="card-body">
-<p class="m-0">ここにタイトル</p>
-<a href="#" class="stretched-link"></a>
+<p class="m-0"><?php echo $t; ?></p>
+<a href="<?php echo $p; ?>" class="stretched-link"></a>
 </div>
 </div>
 </div>
-<div class="col-md-4 col-lg-3 mb-md-0 mb-4">
-<div class="card shadow-sm">
-<svg class="card-img-top border-bottom" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-<div class="card-body">
-<p class="m-0">ここにタイトル</p>
-<a href="#" class="stretched-link"></a>
-</div>
-</div>
-</div>
-<div class="col-md-4 col-lg-3">
-<div class="card shadow-sm">
-<svg class="card-img-top border-bottom" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-<div class="card-body">
-<p class="m-0">ここにタイトル</p>
-<a href="#" class="stretched-link"></a>
-</div>
-</div>
-</div>
+<?php endforeach; wp_reset_postdata(); ?>
 </div>
 <div class="mt-5 text-center">
-<a href="#" class="btn btn-outline-info">すべての事例を見る<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="<?php echo $home; ?>/works/" class="btn btn-outline-info">すべての事例を見る<i class="fas fa-chevron-right ml-2"></i></a>
 </div>
 </div>
 </section>
@@ -174,7 +174,7 @@ $p = get_the_permalink();
 <?php endforeach; wp_reset_postdata(); ?>
 </div>
 <div class="mt-5 text-center">
-<a href="#" class="btn btn-outline-primary">すべてのセミナー情報を見る<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="<?php echo $home; ?>/seminar/" class="btn btn-outline-primary">すべてのセミナー情報を見る<i class="fas fa-chevron-right ml-2"></i></a>
 </div>
 </div>
 </section>
@@ -182,36 +182,36 @@ $p = get_the_permalink();
 <div class="container">
 <h2 class="h3 text-dark text-center font-weight-bold mb-4">ブログ</h2>
 <div class="post-listd-cards row justify-content-center">
+<?php
+$args = [
+    'posts_per_page' => 3,
+    'post_type' => 'post',
+    'orderby' => 'date',
+    'order' => 'DESC'
+];
+$posts = get_posts($args);
+foreach ($posts as $post): setup_postdata($post);
+$t = get_the_title();
+$p = get_the_permalink();
+if (has_post_thumbnail()) {
+    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
+}
+?>
 <div class="col-md-4 col-lg-3 mb-md-0 mb-4">
 <div class="card shadow-sm">
-<svg class="card-img-top border-bottom" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+<?php if (isset($thumbnail) || $thumbnail): ?>
+<img class="card-img-top border-bottom" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<?php endif; ?>
 <div class="card-body">
-<p class="m-0">ここにタイトル</p>
-<a href="#" class="stretched-link"></a>
+<p class="m-0"><?php echo $t; ?></p>
+<a href="<?php echo $p; ?>" class="stretched-link"></a>
 </div>
 </div>
 </div>
-<div class="col-md-4 col-lg-3 mb-md-0 mb-4">
-<div class="card shadow-sm">
-<svg class="card-img-top border-bottom" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-<div class="card-body">
-<p class="m-0">ここにタイトル</p>
-<a href="#" class="stretched-link"></a>
-</div>
-</div>
-</div>
-<div class="col-md-4 col-lg-3">
-<div class="card shadow-sm">
-<svg class="card-img-top border-bottom" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-<div class="card-body">
-<p class="m-0">ここにタイトル</p>
-<a href="#" class="stretched-link"></a>
-</div>
-</div>
-</div>
+<?php endforeach; wp_reset_postdata(); ?>
 </div>
 <div class="mt-5 text-center">
-<a href="#" class="btn btn-outline-primary">すべてのブログを見る<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="<?php echo $home; ?>/blog/" class="btn btn-outline-primary">すべてのブログを見る<i class="fas fa-chevron-right ml-2"></i></a>
 </div>
 </div>
 </section>
@@ -238,9 +238,8 @@ $p = get_the_permalink();
 <?php endforeach; wp_reset_postdata(); ?>
 </div>
 <div class="mt-5 text-center">
-<a href="#" class="btn btn-outline-primary">すべてのお知らせを見る<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="<?php echo $home; ?>/news/" class="btn btn-outline-primary">すべてのお知らせを見る<i class="fas fa-chevron-right ml-2"></i></a>
 </div>
 </div>
 </section>
-<?php get_template_part('cta'); ?>
 <?php get_footer();
