@@ -60,7 +60,7 @@ body {
   border-radius: 0;
 
   &-top {
-    background: url("../images/bg_mv.png") no-repeat center center;
+    background: url("../images/bg_mv.jpg") no-repeat center center;
     background-size: cover;
     padding: $jumbotron-padding*1.75 0 $jumbotron-padding*1.875;
 
@@ -80,7 +80,6 @@ body {
       min-width: 200px;
     }
   }
-
   @include media-breakpoint-down(sm) {
     padding: $jumbotron-padding/1.25 0 $jumbotron-padding*1.2;
   }
@@ -126,7 +125,7 @@ body {
       position: absolute;
       content: '';
       top: calc(50% - 3px);
-      right: .5rem;
+      right: 0.5rem;
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       width: 5px;
@@ -151,6 +150,7 @@ body {
     background-color: rgba(255, 73, 13, 0.1);
     border-color: $primary;
   }
+
   &-outline-info:hover {
     color: $info;
     background-color: rgba(255, 255, 255, 0.1);
@@ -162,19 +162,23 @@ body {
 
 .card {
   border: 0;
-  pointer-events : none;
-  transition: .2s;
+  pointer-events: none;
+  transition: 0.2s;
+
   .card-title {
     margin-bottom: 1rem;
   }
+
   h3 {
     line-height: 1.5;
   }
+
   a {
-    pointer-events : auto;
+    pointer-events: auto;
   }
+
   &:hover {
-    opacity: .85;
+    opacity: 0.85;
   }
 }
 
@@ -182,25 +186,29 @@ body {
   @include media-breakpoint-up(sm) {
     padding: ($font-size-base) 0;
   }
+
   &-toggler-icon {
     background-image: none !important;
   }
 
   &-brand {
     line-height: 1;
-    transition: .2s;
+    transition: 0.2s;
 
     &:hover {
       opacity: 0.5;
     }
   }
-  .text-dark{
-    transition: .2s;
+
+  .text-dark {
+    transition: 0.2s;
+
     &:hover {
       color: $dark !important;
       opacity: 0.5;
     }
   }
+
   .service-menu {
     @include media-breakpoint-up(lg) {
       min-width: 430px;
