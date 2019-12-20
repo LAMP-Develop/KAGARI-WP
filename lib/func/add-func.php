@@ -27,19 +27,12 @@ function customize_manage_posts_custom_column($column_name, $post_id)
 add_action('manage_posts_custom_column', 'customize_manage_posts_custom_column', 10, 2);
 
 // RSSにアイキャッチ含める
-function insert_thumbnail_element_to_feed()
+function add_rss_thumbnail($content)
 {
-    global $post;
-    if (!has_post_thumbnail($post->ID)) {
-        return;
+    if (has_post_thumbnail() === true) {
+        global $post;
+        $content = '<p>'.get_the_post_thumbnail($post->ID, 'medium').'</p>'.$content;
     }
-    $thumbnail_ID = get_post_thumbnail_id($post->ID);
-    $thumbnail = wp_get_attachment_image_src($thumbnail_ID, 'large');
-    $output = '<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" type="image/jpeg"';
-    $output .= ' url="'. $thumbnail[0] .'"';
-    $output .= ' width="'. $thumbnail[1] .'"';
-    $output .= ' height="'. $thumbnail[2] .'"';
-    $output .= ' />';
-    echo $output;
+    return $content;
 }
-add_action('rss2_item', 'insert_thumbnail_element_to_feed');
+add_filter('the_excerpt_rss', 'add_rss_thumbnail');
