@@ -90,6 +90,13 @@ $p = get_field('campaign_url', $id);
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/seminar/">セミナー</a></li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/news/">お知らせ</a></li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/blog/">ブログ</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ヘルプ</a>
+<div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown-2">
+<a class="dropdown-item" href="<?php echo $home; ?>/faq/">よくあるご質問</a>
+<a class="dropdown-item" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
+</div>
+</li>
 </ul>
 <ul class="navbar-nav ml-auto mt-md-0 mt-3">
 <li class="nav-item mr-md-3"><a class="nav-link text-dark" href="<?php echo $home; ?>/document-request/">資料請求</a></li>
