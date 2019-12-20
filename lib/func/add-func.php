@@ -31,7 +31,7 @@ function add_rss_thumbnail($content)
 {
     if (has_post_thumbnail() === true) {
         global $post;
-        $content = '<p>'.get_the_post_thumbnail($post->ID, 'medium').'</p>'.$content;
+        $content = '<p>'.get_the_post_thumbnail($post->ID, 'large').'</p>'.$content;
     }
     return $content;
 }
