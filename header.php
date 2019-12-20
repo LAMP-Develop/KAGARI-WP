@@ -88,8 +88,8 @@ $p = get_field('campaign_url', $id);
 </div>
 </li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/seminar/">セミナー</a></li>
+<li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/works/">導入事例</a></li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/news/">お知らせ</a></li>
-<li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/blog/">ブログ</a></li>
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ヘルプ</a>
 <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown-2">
