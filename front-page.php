@@ -8,7 +8,7 @@ get_header(); ?>
 <p class="lead text-md-center text-white m-0">KAGARIは貴社の成長に必要なデジタルマーケティングを支援する<br class="d-md-block d-none">プロダクトやサービスを提供します。</p>
 <div class="d-flex flex-wrap justify-content-center mt-5">
 <a class="btn btn-success mb-3 mb-md-0 mr-md-4" href="<?php echo $home; ?>/document-request/">資料ダウンロード</a>
-<a class="btn btn-success" href="<?php echo $home; ?>/seminar/">セミナー一覧</a>
+<a class="btn btn-success" href="<?php echo $home; ?>/seminar/">セミナー情報</a>
 </div>
 </div>
 </div>
