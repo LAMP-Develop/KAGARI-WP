@@ -99,7 +99,7 @@ $p = get_field('campaign_url', $id);
 </li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/document-request/">資料請求</a></li>
 </ul>
-<ul class="navbar-nav ml-auto mt-md-0 mt-3">
+<ul class="navbar-nav align-items-center ml-auto mt-md-0 mt-3">
 <li class="nav-item mr-md-2"><a class="nav-link text-dark" href="https://reporting.kagari.ai" target="_blank">ログイン</a></li>
 <li class="nav-item mr-md-3"><a class="nav-link text-primary" href="https://reporting.kagari.ai" target="_blank">新規会員登録</a></li>
 <li class="nav-item mt-3 mt-lg-0">
