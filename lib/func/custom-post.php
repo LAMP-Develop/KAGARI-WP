@@ -141,6 +141,36 @@ function create_post_type()
         'show_in_rest' => true
       )
     );
+    register_post_type(
+    'faq',
+      array(
+        'label' => 'よくあるご質問',
+        'labels' => array(
+           'all_items' => 'よくあるご質問一覧',
+           ),
+        'description' => 'よくあるご質問',
+        'public' => true,
+        'has_archive' => true,
+        'supports' => $supports,
+        'show_in_rest' => true,
+        'menu_position' => 5
+      )
+    );
+    register_taxonomy(
+      'faq_cat',
+      'faq',
+      array(
+        'label' => 'カテゴリー',
+        'labels' => array(
+          'all_items' => 'カテゴリー一覧',
+          'add_new_item' => 'カテゴリーを追加'
+        ),
+        'rewrite' => array('slug' => 'faq'),
+        'with_front' => false,
+        'hierarchical' => true,
+        'show_in_rest' => true
+      )
+    );
     flush_rewrite_rules(false);
 }
 add_action('init', 'create_post_type');
