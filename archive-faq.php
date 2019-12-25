@@ -14,10 +14,20 @@ $postDesc = get_post_type_object($postTypeNameObj)->description;
 </div>
 <section class="pb-5">
 <div class="container">
-<div class="mt-n5 news-lists list-group">
-<?php if (have_posts()): while (have_posts()): the_post(); ?>
-<a href="<?php the_permalink(); ?>" class="rounded-0 list-group-item list-group-item-action">Q. <?php the_title(); ?></a>
+<div class="row justify-content-between bg-white mt-n5 py-4 px-3">
+<div class="col-md-8">
+<div class="news-lists list-group">
+<?php if (have_posts()): while (have_posts()): the_post(); $category = get_the_category(); ?>
+<a href="<?php the_permalink(); ?>" class="rounded-0 list-group-item list-group-item-action">
+<p class="text-success mb-1"><?php echo $category[0]->name; ?>カテゴリー</p>
+<p class="lead text-dark mb-1">Q. <?php the_title(); ?></p>
+</a>
 <?php endwhile; endif; ?>
+</div>
+</div>
+<div class="col-md-4">
+<?php get_sidebar(); ?>
+</div>
 </div>
 </div>
 </section>

@@ -29,7 +29,7 @@ if (has_post_thumbnail()) {
 <article class="post px-md-3 py-4">
 <div class="mb-5">
 <div class="mb-3">
-<p class="mb-1 text-success"><i class="far fa-folder mr-1"></i><?php echo $category[0]->name; ?></p>
+<p class="mb-1"><a href="<?php echo get_category_link($category[0]->term_id); ?>"><i class="far fa-folder mr-1"></i><?php echo $category[0]->name; ?></a></p>
 <i class="far fa-calendar mr-1"></i><?php the_time('Y/m/d');?>
 <?php if(get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')): ?>
 <i class="fas fa-redo mr-1 ml-3"></i><?php the_modified_date('Y/m/d'); ?>

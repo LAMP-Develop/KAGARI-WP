@@ -3,7 +3,7 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri(); ?>
 <aside id="sidebar">
 <!-- 記事検索 -->
-<div class="side-inner mt-3 mb-4">
+<div class="side-inner mb-4">
 <form class="form" method="get" action="<?php echo $home; ?>">
 <div class="input-group">
 <div class="input-group-prepend">

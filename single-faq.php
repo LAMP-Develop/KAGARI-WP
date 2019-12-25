@@ -18,10 +18,12 @@ $id = get_the_ID();
 </div>
 <section class="pb-5">
 <div class="container">
-<div class="mt-n5 mb-5 p-md-5 p-4 bg-white">
+<div class="row">
+<div class="col-lg-9 mx-auto mt-n5 mb-5 py-5 px-md-4 bg-white">
 <?php the_content(); ?>
 <div class="mt-5 text-center">
 <a class="btn btn-success" href="<?php echo $home; ?>/faq/">一覧に戻る</a>
+</div>
 </div>
 </div>
 </div>
