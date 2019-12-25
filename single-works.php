@@ -19,6 +19,7 @@ if (has_post_thumbnail()) {
 ?>
 <div class="jumbotron-<?php echo $postTypeNameObj; ?> jumbotron m-0">
 <div class="container">
+<div class="col-lg-9 mx-auto">
 <p class="text-white">導入事例</p>
 <h2 class="text-white font-weight-bold"><?php echo $t; ?></h2>
 <div class="text-white">
@@ -29,17 +30,20 @@ if (has_post_thumbnail()) {
 </div>
 </div>
 </div>
+</div>
 <section class="pb-5">
 <div class="container">
-<div class="mt-n5 mb-5 p-md-5 p-4 bg-white rounded-lg">
-<figure class="mb-4 p-4 shadow-sm">
+<div class="row">
+<div class="col-lg-9 mx-auto mt-n5 mb-5 py-4 px-md-4 bg-white">
+<figure class="mb-4">
 <img class="img-fluid" src="<?php echo $thumbnail ?>" alt="">
 </figure>
 <div class="page-content">
 <?php the_content(); ?>
 </div>
 <div class="mt-5 text-center">
-<a class="btn btn-success" href="<?php echo $home; ?>/works/">一覧に戻る</a>
+<a class="btn btn-success" href="<?php echo $home; ?>/works/"><i class="fas fa-chevron-left mr-2"></i>一覧に戻る</a>
+</div>
 </div>
 </div>
 </div>

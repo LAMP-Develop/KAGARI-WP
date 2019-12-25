@@ -12,7 +12,7 @@ get_header(); ?>
 </div>
 <section class="pt-3 pb-5">
 <div class="container">
-<div class="row justify-content-between bg-white py-4 px-2 rounded-lg">
+<div class="row justify-content-between bg-white py-4 px-3">
 <div class="col-md-8">
 <div class="post-listd-cards row">
 <?php
@@ -20,6 +20,7 @@ if (have_posts()): while (have_posts()):
 the_post();
 $t = get_the_title();
 $p = get_the_permalink();
+$category = get_the_category();
 if (has_post_thumbnail()) {
     $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
 } else {
@@ -31,8 +32,10 @@ if (has_post_thumbnail()) {
 <?php if ($thumbnail != ''): ?>
 <img class="card-img-top" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
 <?php endif; ?>
-<div class="card-body">
-<p class="m-0"><?php echo $t; ?></p>
+<div class="card-body py-3">
+<p class="mb-1 text-success"><?php echo $category[0]->name; ?></p>
+<p class="mb-2 lead text-dark"><?php echo $t; ?></p>
+<p class="mb-0"><?php the_time('Y/m/d');?></p>
 <a href="<?php echo $p; ?>" class="stretched-link"></a>
 </div>
 </div>

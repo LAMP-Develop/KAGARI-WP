@@ -19,7 +19,7 @@ if (has_post_thumbnail()) {
     $thumbnail = $wp_url.'/lib/images/thumbnail.png';
 }
 ?>
-<div class="col-md-4 mb-md-0 mb-3">
+<div class="col-md-4 mb-md-0 mb-3 bg-white py-4 px-3">
 <div class="position-relative card border-0 rounded-lg shadow-sm">
 <img class="card-img-top" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
 <div class="card-body">

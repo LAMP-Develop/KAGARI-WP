@@ -24,11 +24,12 @@ if (has_post_thumbnail()) {
 </div>
 <section class="pt-3 pb-5">
 <div class="container">
-<div class="row justify-content-between bg-white py-4 px-md-3 rounded-lg">
+<div class="row justify-content-between bg-white py-4 px-md-3">
 <div class="col-md-8">
 <article class="post px-md-3 py-4">
 <div class="mb-5">
 <div class="mb-3">
+<p class="mb-1 text-success"><i class="far fa-folder mr-1"></i><?php echo $category[0]->name; ?></p>
 <i class="far fa-calendar mr-1"></i><?php the_time('Y/m/d');?>
 <?php if(get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')): ?>
 <i class="fas fa-redo mr-1 ml-3"></i><?php the_modified_date('Y/m/d'); ?>

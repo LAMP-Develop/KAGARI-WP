@@ -1,6 +1,7 @@
 .page-content {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
   -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
 
   h2,
   h3,
@@ -45,7 +46,7 @@
   p,
   td {
     color: #111111;
-    font-size: 1rem;
+    font-size: 1rem !important;
     line-height: 1.9;
     @include media-breakpoint-down(sm) {
       font-size: $font-size-base;
@@ -54,6 +55,10 @@
 
   img {
     margin: 1.5rem auto;
+  }
+
+  td {
+    padding: .5rem;
   }
 
   table {
