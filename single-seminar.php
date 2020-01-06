@@ -75,7 +75,7 @@ $id = get_the_ID();
 </div>
 <?php if (get_field('seminar_caution', $id)): ?>
 <div class="mt-4 text-center">
-<a class="btn btn-success" href="<?php the_field('seminar_caution', $id); ?>" target="_blank">詳細を見る</a>
+<a class="btn btn-success" href="<?php the_field('seminar_url', $id); ?>" target="_blank">詳細を見る</a>
 </div>
 <?php endif; ?>
 </div>
