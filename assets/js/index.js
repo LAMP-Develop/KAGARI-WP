@@ -32,19 +32,23 @@ $(window).on("load resize", function() {
   }
 });
 
-// CF7
-$('button.form-btn').on('click', function() {
-  let name = $(this).attr('data-name');
-  $('#document-form input#document-name').val(name);
-});
+$(function($) {
+  // CF7
+  $('button.form-btn').on('click', function() {
+    let name = $(this).attr('data-name');
+    $('#document-form input#document-name').val(name);
+  });
 
-let wpcf7Elm = document.querySelector('.wpcf7');
-wpcf7Elm.addEventListener('wpcf7mailsent', function(event) {
-  let inputs = event.detail.inputs;
-  for (let i = 0; i < inputs.length; i++) {
-    if ('document' == inputs[i].name) {
-      console.log(inputs[i].value);
-      break;
-    }
+  let wpcf7Elm = document.querySelector('.wpcf7');
+  if (wpcf7Elm != null) {
+    wpcf7Elm.addEventListener('wpcf7mailsent', function(event) {
+      let inputs = event.detail.inputs;
+      for (let i = 0; i < inputs.length; i++) {
+        if ('document' == inputs[i].name) {
+          console.log(inputs[i].value);
+          break;
+        }
+      }
+    }, false);
   }
-}, false);
+});
