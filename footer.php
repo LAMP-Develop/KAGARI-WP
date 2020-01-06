@@ -31,8 +31,8 @@ if (!is_front_page() && !is_home()) {
 <a class="text-white d-block mb-3" href="https://lamp.jp/recruit/" target="_blank"><i class="fas fa-external-link-alt mr-1"></i>採用情報</a>
 </div>
 <div class="col-md col-12">
-<a class="btn btn-success w-100 mb-3" href="https://kagari.ai/contact/">お問い合わせ</a>
-<a class="btn btn-info w-100 mb-3" href="https://reporting.kagari.ai" target="_blank">新規会員登録</a>
+<!-- <a class="btn btn-success w-100 mb-3" href="https://kagari.ai/contact/">お問い合わせ</a> -->
+<a class="btn btn-success w-100 mb-3" href="https://reporting.kagari.ai" target="_blank">新規会員登録</a>
 <a class="btn btn-outline-info w-100" href="https://reporting.kagari.ai" target="_blank">ログイン</a>
 </div>
 </div>

@@ -89,7 +89,7 @@ $p = get_field('campaign_url', $id);
 </li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/seminar/">セミナー</a></li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/works/">導入事例</a></li>
-<li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/news/">お知らせ</a></li>
+<!-- <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/news/">お知らせ</a></li> -->
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ヘルプ</a>
 <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown-2">
@@ -101,9 +101,9 @@ $p = get_field('campaign_url', $id);
 </ul>
 <ul class="navbar-nav align-items-center ml-auto mt-md-0 mt-3">
 <li class="nav-item mr-md-2"><a class="nav-link text-dark" href="https://reporting.kagari.ai" target="_blank">ログイン</a></li>
-<li class="nav-item mr-md-3"><a class="nav-link text-primary" href="https://reporting.kagari.ai" target="_blank">新規会員登録</a></li>
+<!-- <li class="nav-item mr-md-3"><a class="nav-link text-primary" href="https://reporting.kagari.ai" target="_blank">新規会員登録</a></li> -->
 <li class="nav-item mt-3 mt-lg-0">
-<a class="btn btn-primary btn-sm" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
+<a class="btn btn-primary btn-sm" href="https://reporting.kagari.ai" target="_blank">新規会員登録</a>
 </li>
 </ul>
 </div>
