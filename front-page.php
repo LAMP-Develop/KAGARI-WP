@@ -154,7 +154,7 @@ if (has_post_thumbnail()) {
 <section class="py-5">
 <div class="container">
 <h2 class="h3 text-dark text-center font-weight-bold mb-4">セミナー情報</h2>
-<div class="news-lists list-group col-lg-9 mx-auto pr-0">
+<div class="post-listd-cards row justify-content-center">
 <?php
 $args = [
     'posts_per_page' => 4,
@@ -166,11 +166,21 @@ $posts = get_posts($args);
 foreach ($posts as $post): setup_postdata($post);
 $t = get_the_title();
 $p = get_the_permalink();
+if (has_post_thumbnail()) {
+    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
+}
 ?>
-<a href="<?php the_permalink(); ?>" class="rounded-0 list-group-item list-group-item-action">
-<time datetime="<?php the_time('Y-m-d'); ?>" class="small d-block"><?php the_time('Y/m/d'); ?></time>
-<span class="d-block"><?php the_title(); ?></span>
-</a>
+<div class="col-md-4 mb-md-0 mb-4">
+<div class="card h-100 shadow-sm">
+<?php if (isset($thumbnail) || $thumbnail): ?>
+<img class="card-img-top border-bottom" src="<?php echo $thumbnail; ?>" alt="<?php echo $t; ?>">
+<?php endif; ?>
+<div class="card-body">
+<p class="lead text-dark m-0"><?php echo $t; ?></p>
+<a href="<?php echo $p; ?>" class="stretched-link"></a>
+</div>
+</div>
+</div>
 <?php endforeach; wp_reset_postdata(); ?>
 </div>
 <div class="mt-5 text-center">
