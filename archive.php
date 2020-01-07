@@ -23,6 +23,11 @@ $postDesc = get_post_type_object($postTypeNameObj)->description;
 </a>
 <?php endwhile; endif; ?>
 </div>
+<?php
+if (function_exists('pagination')) {
+    pagination();
+}
+?>
 </div>
 </section>
 <?php get_footer();

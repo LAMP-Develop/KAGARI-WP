@@ -45,6 +45,11 @@ if (has_post_thumbnail()) {
 </div>
 <?php endwhile; endif; ?>
 </div>
+<?php
+if (function_exists('pagination')) {
+    pagination();
+}
+?>
 </div>
 <div class="col-md-4">
 <?php get_sidebar(); ?>

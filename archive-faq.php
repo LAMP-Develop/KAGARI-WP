@@ -17,16 +17,26 @@ $postDesc = get_post_type_object($postTypeNameObj)->description;
 <div class="row justify-content-between bg-white mt-n5 py-4 px-3">
 <div class="col-md-8">
 <div class="news-lists list-group">
-<?php if (have_posts()): while (have_posts()): the_post(); $category = get_the_category(); ?>
+<?php
+if (have_posts()):
+while (have_posts()):
+the_post();
+$category = get_the_terms(get_the_ID(), 'faq_cat');
+?>
 <a href="<?php the_permalink(); ?>" class="rounded-0 list-group-item list-group-item-action">
-<p class="text-success mb-1"><?php echo $category[0]->name; ?>カテゴリー</p>
+<p class="text-success mb-1"><?php echo $category[0]->name; ?></p>
 <p class="lead text-dark mb-1">Q. <?php the_title(); ?></p>
 </a>
 <?php endwhile; endif; ?>
 </div>
+<?php
+if (function_exists('pagination')) {
+    pagination();
+}
+?>
 </div>
 <div class="col-md-4">
-<?php get_sidebar(); ?>
+<?php get_sidebar('faq'); ?>
 </div>
 </div>
 </div>

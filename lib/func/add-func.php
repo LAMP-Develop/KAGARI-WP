@@ -36,3 +36,39 @@ function add_rss_thumbnail($content)
     return $content;
 }
 add_filter('the_excerpt_rss', 'add_rss_thumbnail');
+
+// ページネーション
+function pagination($pages = '', $range = 1)
+{
+    $showitems = ($range * 2)+1;
+    $text_before = '<i class="fas fa-angle-left"></i>';
+    $text_next = '<i class="fas fa-angle-right"></i>';
+    global $paged;
+    if (empty($paged)) {
+        $paged = 1;
+    }
+    if ($pages == '') {
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if (!$pages) {
+            $pages = 1;
+        }
+    }
+    if (1 != $pages) {
+        echo '<ul class="pagination justify-content-center mb-0 mt-4">'."\n";
+        if ($paged > 1 && $showitems < $pages) {
+            echo '<li class="page-item">'."<a class=\"page-link\" href='".get_pagenum_link($paged - 1)."'>{$text_before}</a></li>";
+        }
+        for ($i=1; $i <= $pages; $i++) {
+            if (1 != $pages &&(!($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems)) {
+                echo ($paged == $i)?
+                '<li class="page-item disabled"><span class="page-link">'.$i.'</span></li>'."\n":
+                '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($i).'">'.$i.'</a></li>'."\n";
+            }
+        }
+        if ($paged < $pages && $showitems < $pages) {
+            echo '<li class="page-item">'."<a class=\"page-link\" href=\"".get_pagenum_link($paged + 1)."\">{$text_next}</a></li>";
+        }
+        echo '</ul>'."\n";
+    }
+}
