@@ -21,7 +21,7 @@ function create_post_type()
         'public' => true,
         'has_archive' => true,
         'supports' => $supports,
-        'show_in_rest' => false,
+        'show_in_rest' => true,
         'menu_position' => 5
       )
     );
@@ -36,7 +36,7 @@ function create_post_type()
         'public' => true,
         'has_archive' => true,
         'supports' => $supports,
-        'show_in_rest' => false,
+        'show_in_rest' => true,
         'menu_position' => 5
       )
     );
