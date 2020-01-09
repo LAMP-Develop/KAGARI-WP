@@ -18,7 +18,6 @@ $args = [
 $categories = get_terms('faq_cat');
 foreach ($categories as $category):
     $cat_link = get_term_link($category);
-    var_dump($cat_link);
     $cat_name = $category->name;
 ?>
 <a href="<?php echo $cat_link; ?>" class="text-body list-group-item"><?php echo $cat_name; ?></a>
