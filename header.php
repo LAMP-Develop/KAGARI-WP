@@ -7,6 +7,16 @@ $wp_url = get_template_directory_uri(); ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <?php wp_head(); ?>
+<?php if (!is_user_logged_in()): ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79537153-14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-79537153-14');
+</script>
+<?php endif;?>
 </head>
 <body>
 <!-- ヘッダー -->
@@ -53,7 +63,7 @@ $p = get_field('campaign_url', $id);
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">サービス</a>
 <div class="dropdown-menu service-menu mt-0" aria-labelledby="navbarDropdown-1">
-<a class="dropdown-item" href="http://lamp-inc.sakura.ne.jp/kagari_re/report/" target="_blank">
+<a class="dropdown-item" href="https://report.kagari.ai/" target="_blank">
 <div class="row no-gutters">
 <div class="col-md-6 service-logo">
 <img src="<?php echo $wp_url; ?>/lib/images/logo_report.svg" alt="KAGARI Report">
@@ -61,7 +71,7 @@ $p = get_field('campaign_url', $id);
 <p class="col-md-6 text-body mt-1 mt-md-0 mb-0">レポート作成ツール</p>
 </div>
 </a>
-<a class="dropdown-item" href="http://lamp-inc.sakura.ne.jp/kagari_re/seo/" target="_blank">
+<a class="dropdown-item" href="https://seo.kagari.ai/" target="_blank">
 <div class="row no-gutters">
 <div class="col-md-6 service-logo">
 <img src="<?php echo $wp_url; ?>/lib/images/logo_seo.svg" alt="KAGARI SEO">
@@ -77,7 +87,7 @@ $p = get_field('campaign_url', $id);
 <p class="col-md-6 text-body mt-1 mt-md-0 mb-0">WEBコンサルティング</p>
 </div>
 </a>
-<a class="dropdown-item" href="https://marketing.lamp.jp" target="_blank">
+<a class="dropdown-item" href="https://marketing.kagari.ai" target="_blank">
 <div class="row no-gutters">
 <div class="col-md-6 service-logo">
 <img src="<?php echo $wp_url; ?>/lib/images/logo_marketing.svg" alt="KAGARI Markting">
@@ -88,8 +98,8 @@ $p = get_field('campaign_url', $id);
 </div>
 </li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/seminar/">セミナー</a></li>
+<li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/blog/">ブログ</a></li>
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/works/">導入事例</a></li>
-<!-- <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/news/">お知らせ</a></li> -->
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ヘルプ</a>
 <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown-2">
@@ -100,10 +110,9 @@ $p = get_field('campaign_url', $id);
 <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/document-request/">資料請求</a></li>
 </ul>
 <ul class="navbar-nav align-items-center ml-auto mt-md-0 mt-3">
-<li class="nav-item mr-md-2"><a class="nav-link text-dark" href="https://reporting.kagari.ai" target="_blank">ログイン</a></li>
-<!-- <li class="nav-item mr-md-3"><a class="nav-link text-primary" href="https://reporting.kagari.ai" target="_blank">新規会員登録</a></li> -->
+<li class="nav-item mr-md-2"><a class="nav-link text-dark" href="https://analysis.kagari.ai" target="_blank">ログイン</a></li>
 <li class="nav-item mt-3 mt-lg-0">
-<a class="btn btn-primary btn-sm" href="https://reporting.kagari.ai" target="_blank">新規会員登録</a>
+<a class="btn btn-primary btn-sm" href="https://analysis.kagari.ai/register" target="_blank">新規会員登録</a>
 </li>
 </ul>
 </div>

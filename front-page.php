@@ -46,7 +46,7 @@ get_header(); ?>
 <h3 class="card-title text-dark font-weight-bold">WEBサイトのアクセス解析<br class="d-none d-xl-block">レポートをAIが自動作成</h3>
 <p class="card-text">時間と手間のかかる解析レポートを自動で作成。Google Analyticsと連携してすぐに使えます。</p>
 <p class="card-text mt-4">
-<a href="http://lamp-inc.sakura.ne.jp/kagari_re/report/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="https://report.kagari.ai/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </p>
 </div>
 </div>
@@ -65,7 +65,7 @@ get_header(); ?>
 <h3 class="card-title text-dark font-weight-bold">ページごとの比較に特化した<br class="d-none d-xl-block">SEO流入分析ツール</h3>
 <p class="card-text">Google AnalyticsとSearch Consoleのデータを1つの画面で管理。大量のページを一度に解析できます。</p>
 <p class="card-text mt-4">
-<a href="http://lamp-inc.sakura.ne.jp/kagari_re/seo/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="https://seo.kagari.ai/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </p>
 </div>
 </div>
@@ -103,7 +103,7 @@ get_header(); ?>
 <h3 class="card-title text-dark font-weight-bold">デジタルコンテンツを軸とした<br class="d-none d-xl-block">マーケティング支援</h3>
 <p class="card-text">KAGARIの解析データに基づいて、貴社の成長に合わせた最適なプランニングやコンテンツ制作を行います。</p>
 <p class="card-text mt-4">
-<a href="http://lamp-inc.sakura.ne.jp/kagari_re/marketing/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
+<a href="https://marketing.kagari.ai/" class="stretched-link" target="_blank">もっと詳しく<i class="fas fa-chevron-right ml-2"></i></a>
 </p>
 </div>
 </div>
