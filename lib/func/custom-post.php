@@ -143,6 +143,6 @@ function create_post_type()
         'show_in_rest' => true
       )
     );
-    flush_rewrite_rules(true);
+    flush_rewrite_rules(false);
 }
 add_action('init', 'create_post_type');
