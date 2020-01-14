@@ -2,14 +2,10 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header();
-$q = $wp_query->query_vars;
-$postTypeNameObj = $q['post_type'];
-$postTypeName = get_post_type_object($postTypeNameObj)->labels->name;
-$postDesc = get_post_type_object($postTypeNameObj)->description;
 ?>
-<div class="jumbotron-<?php echo $postTypeNameObj; ?> jumbotron m-0">
+<div class="jumbotron-faq jumbotron m-0">
 <div class="container">
-<h2 class="h1 text-center text-white font-weight-bold mb-4"><?php echo $postTypeName; ?></h2>
+<h2 class="h1 text-center text-white font-weight-bold mb-4">よくあるご質問</h2>
 </div>
 </div>
 <section class="pb-5">

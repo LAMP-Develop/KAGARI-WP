@@ -11,8 +11,8 @@ function create_post_type()
         'custom-fields'
     ];
     register_post_type(
-    'campaign',
-      array(
+        'campaign',
+        array(
         'label' => 'キャンペーン',
         'labels' => array(
            'all_items' => 'キャンペーン一覧',
@@ -26,8 +26,8 @@ function create_post_type()
       )
     );
     register_post_type(
-    'seminar',
-      array(
+        'seminar',
+        array(
         'label' => 'セミナー',
         'labels' => array(
            'all_items' => 'セミナー一覧',
@@ -41,8 +41,8 @@ function create_post_type()
       )
     );
     register_post_type(
-    'news',
-      array(
+        'news',
+        array(
         'label' => 'お知らせ',
         'labels' => array(
            'all_items' => 'お知らせ一覧',
@@ -56,9 +56,9 @@ function create_post_type()
       )
     );
     register_taxonomy(
-      'news_cat',
-      'news',
-      array(
+        'news_cat',
+        'news',
+        array(
         'label' => 'カテゴリー',
         'labels' => array(
           'all_items' => 'カテゴリー一覧',
@@ -71,9 +71,9 @@ function create_post_type()
       )
     );
     register_taxonomy(
-      'news_tag',
-      'news',
-      array(
+        'news_tag',
+        'news',
+        array(
         'label' => 'タグ',
         'labels' => array(
           'all_items' => 'タグ一覧',
@@ -84,8 +84,8 @@ function create_post_type()
       )
     );
     register_post_type(
-    'works',
-      array(
+        'works',
+        array(
         'label' => '導入事例',
         'labels' => array(
            'all_items' => '導入事例一覧',
@@ -99,9 +99,9 @@ function create_post_type()
       )
     );
     register_taxonomy(
-      'works_cat',
-      'works',
-      array(
+        'works_cat',
+        'works',
+        array(
         'label' => 'カテゴリー',
         'labels' => array(
           'all_items' => 'カテゴリー一覧',
@@ -114,8 +114,8 @@ function create_post_type()
       )
     );
     register_post_type(
-    'faq',
-      array(
+        'faq',
+        array(
         'label' => 'よくあるご質問',
         'labels' => array(
            'all_items' => 'よくあるご質問一覧',
@@ -129,9 +129,9 @@ function create_post_type()
       )
     );
     register_taxonomy(
-      'faq_cat',
-      'faq',
-      array(
+        'faq_cat',
+        'faq',
+        array(
         'label' => 'カテゴリー',
         'labels' => array(
           'all_items' => 'カテゴリー一覧',
@@ -146,3 +146,32 @@ function create_post_type()
     flush_rewrite_rules(false);
 }
 add_action('init', 'create_post_type');
+
+
+function my_type_link($link, $post)
+{
+    if ('faq' === $post->post_type) {
+        // カスタム投稿名/ターム/にする
+        $term = wp_get_post_terms($post->ID, 'faq_cat');
+        if (!empty($term)) {
+            return home_url('/faq/'.$term[0]->slug.'/'.$post->ID);
+        }
+    } else {
+        return $link;
+    }
+}
+add_filter('post_type_link', 'my_type_link', 1, 2);
+
+function my_rewrite_rules_array($rules)
+{
+    $new_rules = array(
+        //アーカイブページ送り
+        'faq(?:/([0-9]+))?/?$' => 'index.php?post_type=faq&paged=$matches[1]',
+        //個別記事
+        'faq/(.+?)/([0-9]+)$' => 'index.php?post_type=faq&p=$matches[2]',
+        //アーカイブ
+        'faq/([^/]+)(?:/([0-9]+))?/?$' => 'index.php?faq_cat=$matches[1]&paged=$matches[2]',
+    );
+    return $new_rules+$rules;
+}
+add_filter('rewrite_rules_array', 'my_rewrite_rules_array');
