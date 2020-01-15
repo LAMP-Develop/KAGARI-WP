@@ -107,7 +107,7 @@ $p = get_field('campaign_url', $id);
 <a class="dropdown-item" href="<?php echo $home; ?>/contact/">お問い合わせ</a>
 </div>
 </li>
-<li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/document-request/">資料請求</a></li>
+<!-- <li class="nav-item"><a class="nav-link text-dark" href="<?php echo $home; ?>/document-request/">資料請求</a></li> -->
 </ul>
 <ul class="navbar-nav align-items-center ml-auto mt-md-0 mt-3">
 <li class="nav-item mr-md-2"><a class="nav-link text-dark" href="https://analysis.kagari.ai" target="_blank">ログイン</a></li>
