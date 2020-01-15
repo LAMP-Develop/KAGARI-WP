@@ -4,8 +4,8 @@ $wp_url = get_template_directory_uri();
 get_header(); ?>
 <div class="jumbotron-top jumbotron m-0">
 <div class="container">
-<h2 class="h1 text-md-center text-white font-weight-bold mb-4">もっと身近に<br>デジタルマーケ<br class="d-md-none">ティング。</h2>
-<p class="lead text-md-center text-white m-0">KAGARIは貴社の成長に必要なデジタルマーケティングを支援する<br class="d-md-block d-none">プロダクトやサービスを提供します。</p>
+<h2 class="h1 text-md-center text-white font-weight-bold mb-4">もっと身近に<br>デジタルマーケティング</h2>
+<p class="lead text-md-center text-white m-0">KAGARIは貴社の成長に必要なデジタルマーケティングを支援する<br class="d-md-block d-none">ツールやサービスを提供します。</p>
 <div class="d-flex flex-wrap justify-content-center mt-5">
 <!-- <a class="btn btn-success mb-3 mb-md-0 mr-md-4" href="<?php echo $home; ?>/document-request/">資料ダウンロード</a> -->
 <a class="btn btn-success" href="<?php echo $home; ?>/seminar/">セミナー情報</a>
@@ -28,8 +28,8 @@ get_header(); ?>
 </div>
 <div class="col-md">
 <h2 class="h4 text-dark font-weight-bold mb-3">サービス</h2>
-<h3 class="h2 text-dark font-weight-bold mb-4">こんな感じのサービスでデジタルマーケティングを支援します</h3>
-<p class="m-0">KAGARIは貴社の成長に必要なデジタルマーケティングを支援するプロダクトやサービスを提供します。KAGARIは貴社の成長に必要なデジタルマーケティングを支援するプロダクトやサービスを提供します。</p>
+<h3 class="h2 text-dark font-weight-bold mb-4">1社1社にとって最適なマーケティングをデータとクリエイティブ力が実現</h3>
+<p class="m-0">従来は膨大なデータがばらばらで、つながりを生かす環境が整っていませんでした。KARTEでは、サイト内外の様々なデータのつながりから人を文脈的に把握することが可能です。データを扱うサービス担当者が、データを人として直感的に解釈できるよう、UI・機能あらゆるアプローチで、分析・解析を「溶かす」努力をしています。</p>
 </div>
 </div>
 </div>
