@@ -10,7 +10,7 @@ $postDesc = get_post_type_object($postTypeNameObj)->description;
 <div class="jumbotron-<?php echo $postTypeNameObj; ?> jumbotron m-0">
 <div class="container">
 <h2 class="h1 text-center text-white font-weight-bold mb-4"><?php echo $postTypeName; ?></h2>
-<p class="lead text-md-center text-white m-0"><?php echo $postDesc; ?></p>
+<!-- <p class="lead text-md-center text-white m-0"><?php echo $postDesc; ?></p> -->
 </div>
 </div>
 <section class="pb-5">
