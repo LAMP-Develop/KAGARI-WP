@@ -16,7 +16,7 @@ get_header(); ?>
 <div class="card py-4 mt-n5 shadow">
 <div class="card-body">
 <h3 class="text-center text-dark font-weight-bold mb-4">効率よく効果が出なければ<br>デジタルマーケティングは<br class="d-md-none">意味がない</h3>
-<p class="text-md-center m-0">KAGARIは貴社の成長に必要なデジタルマーケティングを支援する<br class="d-md-block d-none">プロダクトやサービスを提供します。</p>
+<p class="text-md-center m-0">KAGARIは貴社の成長に必要なデジタルマーケティングを支援する<br class="d-md-block d-none">ツールやサービスを提供します。</p>
 </div>
 </div>
 </div>
@@ -27,9 +27,9 @@ get_header(); ?>
 <img class="img-fluid" src="<?php echo $wp_url; ?>/lib/images/fig_kagari.png" srcset="<?php echo $wp_url; ?>/lib/images/fig_kagari.png 1x, <?php echo $wp_url; ?>/lib/images/fig_kagari@2x.png 2x" alt="">
 </div>
 <div class="col-md">
-<h2 class="h4 text-dark font-weight-bold mb-3">サービス</h2>
+<!-- <h2 class="h4 text-dark font-weight-bold mb-3">サービス</h2> -->
 <h3 class="h2 text-dark font-weight-bold mb-4">1社1社にとって最適なマーケティングをデータとクリエイティブ力が実現</h3>
-<p class="m-0">従来は膨大なデータがばらばらで、つながりを生かす環境が整っていませんでした。KARTEでは、サイト内外の様々なデータのつながりから人を文脈的に把握することが可能です。データを扱うサービス担当者が、データを人として直感的に解釈できるよう、UI・機能あらゆるアプローチで、分析・解析を「溶かす」努力をしています。</p>
+<!-- <p class="m-0">従来は膨大なデータがばらばらで、つながりを生かす環境が整っていませんでした。KARTEでは、サイト内外の様々なデータのつながりから人を文脈的に把握することが可能です。データを扱うサービス担当者が、データを人として直感的に解釈できるよう、UI・機能あらゆるアプローチで、分析・解析を「溶かす」努力をしています。</p> -->
 </div>
 </div>
 </div>
