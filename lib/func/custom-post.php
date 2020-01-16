@@ -165,8 +165,6 @@ add_filter('post_type_link', 'my_type_link', 1, 2);
 function my_rewrite_rules_array($rules)
 {
     $new_rules = array(
-        //アーカイブページ送り
-        'faq(?:/([0-9]+))?/?$' => 'index.php?post_type=faq&paged=$matches[1]',
         //個別記事
         'faq/(.+?)/([0-9]+)$' => 'index.php?post_type=faq&p=$matches[2]',
         //アーカイブ
@@ -175,3 +173,14 @@ function my_rewrite_rules_array($rules)
     return $new_rules+$rules;
 }
 add_filter('rewrite_rules_array', 'my_rewrite_rules_array');
+
+function change_posts_per_page($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        if (is_post_type_archive('faq')) {
+            $query->set('posts_per_page', 50);
+        }
+    }
+    return $query;
+}
+add_action('pre_get_posts', 'change_posts_per_page');
