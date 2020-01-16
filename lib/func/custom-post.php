@@ -177,8 +177,8 @@ add_filter('rewrite_rules_array', 'my_rewrite_rules_array');
 function change_posts_per_page($query)
 {
     if (!is_admin() && $query->is_main_query()) {
-        if (is_post_type_archive('faq')) {
-            $query->set('posts_per_page', 50);
+        if (is_post_type_archive('faq') || $query -> is_tax('faq_cat')) {
+            $query->set('posts_per_page', 100);
         }
     }
     return $query;
