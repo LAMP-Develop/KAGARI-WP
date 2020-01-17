@@ -20,8 +20,8 @@ the_post();
 $category = get_the_terms(get_the_ID(), 'faq_cat');
 ?>
 <a href="<?php the_permalink(); ?>" class="rounded-0 list-group-item list-group-item-action">
-<p class="text-success mb-1"><?php echo $category[0]->name; ?></p>
-<p class="lead text-dark mb-1">Q. <?php the_title(); ?></p>
+<!-- <p class="text-success mb-1"><?php echo $category[0]->name; ?></p> -->
+<p class="lead text-dark m-0">Q. <?php the_title(); ?></p>
 </a>
 <?php endwhile; endif; ?>
 </div>
