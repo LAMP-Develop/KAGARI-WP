@@ -9,16 +9,14 @@ $wp_url = get_template_directory_uri(); ?>
 <a href="<?php echo $home; ?>/faq/" class="text-body list-group-item">全ての質問</a>
 <?php
 $args = [
-    'taxonomy' => 'faq',
     'orderby' => 'id',
-    'order' => 'asc',
-    'parent' => 1,
-    'hide_empty' => 0,
+    'parent' => 0,
 ];
-$categories = get_terms('faq_cat');
+$categories = get_terms('faq_cat', $args);
 foreach ($categories as $category):
     $cat_link = get_term_link($category);
     $cat_name = $category->name;
+    $cat_id = $category->term_id;
 ?>
 <a href="<?php echo $cat_link; ?>" class="text-body list-group-item"><?php echo $cat_name; ?></a>
 <?php endforeach; ?>
