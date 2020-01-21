@@ -82,6 +82,7 @@
   .blog-card a {
     box-sizing: border-box;
     display: table;
+    text-decoration: none;
     max-width: 500px;
     margin: 1rem 0;
     background-color: #fff;
@@ -118,9 +119,9 @@
   }
 
   .blog-card-content p {
-    color: #535353;
     font-weight: bold;
     margin: 0;
     line-height: 1.5;
+    text-decoration: none;
   }
 }
