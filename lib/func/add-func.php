@@ -72,3 +72,30 @@ function pagination($pages = '', $range = 1)
         echo '</ul>'."\n";
     }
 }
+
+// ブログカード
+function nlink_scode($atts)
+{
+    extract(shortcode_atts(array(
+        'url'=>"",
+        'title'=>"",
+    ), $atts));
+    $id = url_to_postid($url);
+    if (empty($title)) {
+        $title = esc_html(get_the_title($id));
+    }
+    if (has_post_thumbnail($id)) {
+        $img = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'thumbnail');
+        $img_tag = "<img src='".$img[0]."' alt='{$title}' width=".$img[1]." height=".$img[2].">";
+    }
+    $nlink .='
+<div class="blog-card">
+<a href="'.$url.'" target="_blank">
+<div class="blog-card-thumbnail">'.$img_tag.'</div>
+<div class="blog-card-content"><p>'.$title.'</p></div>
+<span class="clear"></span>
+</a>
+</div>';
+    return $nlink;
+}
+add_shortcode('nlink', 'nlink_scode');
