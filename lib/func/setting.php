@@ -92,11 +92,12 @@ function register_my_menu()
 add_action('init', 'register_my_menu');
 
 // エディタースタイル追加
-function wpdocs_theme_add_editor_styles()
+function gutenberg_support_setup()
 {
+    add_theme_support('editor-styles');
     add_editor_style('editor-style.css');
 }
-add_action('admin_init', 'wpdocs_theme_add_editor_styles');
+add_action('after_setup_theme', 'gutenberg_support_setup');
 
 // 自動更新
 add_filter('allow_major_auto_core_updates', '__return_false');

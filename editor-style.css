@@ -1,0 +1,52 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  margin: 2em auto 0.5em;
+}
+
+h2 {
+  padding-bottom: 0.5em;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.3125rem;
+  border-bottom: solid 2px #2E4369;
+  color: #030F36;
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  border-left: solid 2px #2E4369;
+  padding: 0.5em;
+  font-size: 1.3125rem;
+  color: #030F36;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.1375rem;
+  color: #030F36;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.9625rem;
+  color: #030F36;
+}
+
+li,
+p,
+td {
+  color: #111111;
+  font-size: 1rem !important;
+  line-height: 1.9;
+}
