@@ -7,9 +7,9 @@ add_theme_support('post-thumbnails');
 add_theme_support('html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption'));
 
 // oembed消去
-remove_action('wp_head', 'rest_output_link_wp_head');
-remove_action('wp_head', 'wp_oembed_add_discovery_links');
-remove_action('wp_head', 'wp_oembed_add_host_js');
+// remove_action('wp_head', 'rest_output_link_wp_head');
+// remove_action('wp_head', 'wp_oembed_add_discovery_links');
+// remove_action('wp_head', 'wp_oembed_add_host_js');
 
 // wp-json消去
 remove_action('template_redirect', 'rest_output_link_header', 11);
