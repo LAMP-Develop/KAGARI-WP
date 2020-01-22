@@ -36,5 +36,20 @@ foreach ($categories as $category):
 <?php endforeach; ?>
 </div>
 </div>
+<!-- タグ -->
+<div class="side-inner mt-5">
+<h3 class="h6 text-dark font-weight-bold">おすすめタグ</h3>
+<?php
+$tags = get_tags();
+?>
+<div class="tags">
+<?php
+foreach ($tags as $key => $tag):
+$link = get_tag_link($tag->term_id);
+?>
+<a class="text-decoration-none text-body mr-2" href="<?php echo $link; ?>"><i class="fas fa-tag mr-1"></i><?php echo $tag->name; ?></a>
+<?php endforeach; ?>
+</div>
+</div>
 
 </aside>

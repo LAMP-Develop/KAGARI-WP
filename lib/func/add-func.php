@@ -76,14 +76,17 @@ function pagination($pages = '', $range = 1)
 // ブログカード
 function nlink_scode($atts)
 {
-    extract(shortcode_atts(array(
-        'url'=>"",
-        'title'=>"",
-    ), $atts));
+    $nlink = '';
+    extract(shortcode_atts([
+        'url' => ''
+    ], $atts));
+
     $id = url_to_postid($url);
+
     if (empty($title)) {
         $title = esc_html(get_the_title($id));
     }
+
     if (has_post_thumbnail($id)) {
         $img = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'thumbnail');
         $img_tag = "<img src='".$img[0]."' alt='{$title}' width=".$img[1]." height=".$img[2].">";
@@ -96,6 +99,7 @@ function nlink_scode($atts)
 <span class="clear"></span>
 </a>
 </div>';
+
     return $nlink;
 }
 add_shortcode('nlink', 'nlink_scode');
