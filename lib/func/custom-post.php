@@ -32,7 +32,7 @@ function create_post_type()
         'labels' => array(
            'all_items' => 'セミナー一覧',
            ),
-        'description' => 'ウェブマーケティング手法を探している方や<br class="d-md-block d-none">マーケティング支援事業者様に向けて、<br class="d-md-block d-none">セミナーを実施しております。',
+        'description' => '企業のWEB担当者様に向けて、<br class="d-md-block d-none">セミナーを実施しております。',
         'public' => true,
         'has_archive' => true,
         'supports' => $supports,
