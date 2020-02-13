@@ -17,7 +17,7 @@ get_header();
 <div class="container">
 <div class="row justify-content-between bg-white py-4 px-3">
 <div class="col-md-8">
-<div class="col-12 mb-4">
+<div class="col-12 mb-4 border-bottom">
 <?php
 $cat_ttl = single_cat_title('', false);
 if ($cat_ttl === 'ブログ') {
