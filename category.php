@@ -17,6 +17,15 @@ get_header();
 <div class="container">
 <div class="row justify-content-between bg-white py-4 px-3">
 <div class="col-md-8">
+<div class="col-12 mb-4">
+<?php
+$cat_ttl = single_cat_title('', false);
+if ($cat_ttl === 'ブログ') {
+    $cat_ttl = '新着記事一覧';
+}
+?>
+<h3 class=""><?php echo $cat_ttl; ?></h3>
+</div>
 <div class="post-listd-cards row">
 <?php
 if (have_posts()): while (have_posts()):
